@@ -2,8 +2,8 @@
 
 ## Current Status
 **Last Updated:** 2026-04-08
-**Tasks Completed:** 4 / 32
-**Current Task:** name-items-ch7-12 complete
+**Tasks Completed:** 5 / 32
+**Current Task:** favicon complete
 
 ---
 
@@ -84,5 +84,12 @@
 - `bun run lint` (pass) and `bun run build` (pass)
 - Verified in browser: Chapter 7 "Tommy's Dam", Chapter 8 "The University" items all display proper names
 - Screenshot: `screenshots/name-items-ch7-12.png`
+
+### 2026-04-08 — favicon
+- Replaced Vite lightning bolt favicon with TLOU-themed firefly SVG
+- Design: dark circle background (#1a1a14), stylized firefly with glowing yellow abdomen, translucent wings, antennae
+- Colors match the app's post-apocalyptic theme (olive greens, muted yellows)
+- `bun run lint` (pass) and `bun run build` (pass)
+- Screenshot: `screenshots/favicon.png`
 
 <!-- Agent will append dated entries below -->

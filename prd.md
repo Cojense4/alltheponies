@@ -45,7 +45,7 @@ Transform the TLOU Collectibles Tracker into a full interactive guide with two v
       "Save as public/favicon.svg. index.html already references it",
       "Verify: browser tab shows TLOU icon"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "collapsible-sections",
