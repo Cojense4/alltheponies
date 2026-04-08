@@ -24,3 +24,7 @@ dist-ssr
 *.sw?
 .opencode/
 .env
+venv
+node_modules
+CLAUDE.md
+clerk-nextjs-guide
