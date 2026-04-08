@@ -761,7 +761,7 @@ const guide: Chapter[] = [
           {
             id: "c6-4",
             tag: "FF",
-            name: null,
+            name: "Sewer Waterway Pendant",
             desc: "After entering the sewers, look right for water draining into the current area. Climb up into the waterway for a pendant.",
           },
           {
@@ -773,7 +773,7 @@ const guide: Chapter[] = [
           {
             id: "c6-6",
             tag: "FF",
-            name: null,
+            name: "Sunken Car Pendant",
             desc: "When Joel can swim and dive, dive where the light shines through the broken roof. Next to a sunken car is a pendant.",
           },
           {
@@ -785,7 +785,7 @@ const guide: Chapter[] = [
           {
             id: "c6-8",
             tag: "TOOL",
-            name: null,
+            name: "Generator Room Tools",
             desc: "After Ellie starts the generator, hug the left wall to find an equipment storage room with tools.",
           },
           {
@@ -826,19 +826,19 @@ const guide: Chapter[] = [
           {
             id: "c6-14",
             tag: "CONV",
-            name: null,
+            name: "Kitchen Cave-in Chat",
             desc: "At the curve in the road, a caved-in house reveals a kitchen. Henry has a conversation.",
           },
           {
             id: "c6-15",
             tag: "CONV",
-            name: null,
+            name: "Warning Sign Chat",
             desc: "Opposite the kitchen, the house with 'Will Shoot On Sight' written on it. Henry has something to say.",
           },
           {
             id: "c6-16",
             tag: "CONV",
-            name: null,
+            name: "Ice Cream Truck Chat",
             desc: "Ice Cream truck conversation with Ellie, hard to miss.",
           },
           {
@@ -868,13 +868,13 @@ const guide: Chapter[] = [
           {
             id: "c6-21",
             tag: "COMIC",
-            name: null,
+            name: "Bathroom Comic",
             desc: "In the next house, 2nd floor bedroom has an adjoining bathroom with a comic.",
           },
           {
             id: "c6-22",
             tag: "CONV",
-            name: null,
+            name: "Dart Game Chat",
             desc: "Inside the house at the dead end, go upstairs and come back down. Ellie and Sam play darts. Throw a dart when prompted.",
           },
           {
@@ -886,7 +886,7 @@ const guide: Chapter[] = [
           {
             id: "c6-23",
             tag: "FF",
-            name: null,
+            name: "Backyard Tree Pendant",
             desc: "At the dead end, search the backyard for small child-houses. In the tree above is the pendant.",
           },
         ],
