@@ -34,3 +34,5 @@ activity.md
 ralph.sh
 PROMPT.md
 screenshots/
+.playwright-mcp/
+reset-playwright.sh
