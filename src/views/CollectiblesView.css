@@ -153,6 +153,16 @@
   background: var(--accent-glow);
 }
 
+.tag-counter {
+  opacity: 0.6;
+  font-size: 0.65rem;
+  margin-left: 2px;
+}
+
+.tag-filter-btn.active .tag-counter {
+  opacity: 0.8;
+}
+
 /* ── Chapter ── */
 .chapter {
   margin-bottom: 40px;

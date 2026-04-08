@@ -67,7 +67,19 @@ function CollectiblesView() {
     },
   );
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
-  const [activeFilter, setActiveFilter] = useState<string | null>(null);
+  const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set());
+
+  const toggleFilter = useCallback((tag: string) => {
+    setActiveFilters((prev) => {
+      const next = new Set(prev);
+      if (next.has(tag)) {
+        next.delete(tag);
+      } else {
+        next.add(tag);
+      }
+      return next;
+    });
+  }, []);
 
   const toggle = useCallback((id: string) => {
     setChecked((prev) => {
@@ -149,27 +161,35 @@ function CollectiblesView() {
 
       <div className="tag-filters">
         <button
-          className={`tag-filter-btn ${activeFilter === null ? "active" : ""}`}
-          onClick={() => setActiveFilter(null)}
+          className={`tag-filter-btn ${activeFilters.size === 0 ? "active" : ""}`}
+          onClick={() => setActiveFilters(new Set())}
         >
           All
         </button>
-        {ALL_TAGS.map((tag) => (
-          <button
-            key={tag}
-            className={`tag-filter-btn ${activeFilter === tag ? "active" : ""}`}
-            onClick={() => setActiveFilter(activeFilter === tag ? null : tag)}
-          >
-            {TAG_LABELS[tag]}
-          </button>
-        ))}
+        {ALL_TAGS.map((tag) => {
+          const tagItems = allItems.filter((item) => item.tag === tag);
+          const tagChecked = tagItems.filter((item) => checked[item.id]).length;
+          return (
+            <button
+              key={tag}
+              className={`tag-filter-btn ${activeFilters.has(tag) ? "active" : ""}`}
+              onClick={() => toggleFilter(tag)}
+            >
+              {TAG_LABELS[tag]}{" "}
+              <span className="tag-counter">
+                {tagChecked}/{tagItems.length}
+              </span>
+            </button>
+          );
+        })}
       </div>
 
       {guide.map((chapter, ci) => {
         const chapterItems = chapter.sections.flatMap((s) => s.items);
-        const filtered = activeFilter
-          ? chapterItems.filter((item) => item.tag === activeFilter)
-          : chapterItems;
+        const filtered =
+          activeFilters.size > 0
+            ? chapterItems.filter((item) => activeFilters.has(item.tag))
+            : chapterItems;
         if (filtered.length === 0) return null;
 
         const chapterChecked = filtered.filter(
@@ -203,9 +223,12 @@ function CollectiblesView() {
                   Video Guide &rarr;
                 </a>
                 {chapter.sections.map((section, si) => {
-                  const sectionItems = activeFilter
-                    ? section.items.filter((item) => item.tag === activeFilter)
-                    : section.items;
+                  const sectionItems =
+                    activeFilters.size > 0
+                      ? section.items.filter((item) =>
+                          activeFilters.has(item.tag),
+                        )
+                      : section.items;
                   if (sectionItems.length === 0) return null;
 
                   const sectionKey = `${ci}-${si}`;
