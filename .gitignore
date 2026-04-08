@@ -1,3 +1,12 @@
+# Dependencies & build output
+node_modules
+dist
+dist-ssr
+*.local
+
+# Environment & secrets
+.env
+
 # Logs
 logs
 *.log
@@ -7,12 +16,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
+# Editor/IDE
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -23,16 +27,26 @@ dist-ssr
 *.sln
 *.sw?
 .opencode/
-.env
-venv
-node_modules
-CLAUDE.md
-clerk-nextjs-guide
-.cache/
-activity.md
-.gitignore
+
+# Raw data sources (migrated into src/trophyData.ts)
+TLOU_REMASTERED_TROPHIES.json
+
+# RALPH loop — tooling files, not app code
 ralph.sh
 PROMPT.md
+activity.md
+prd.md
+prd-specs.md
+IMPORT_GUIDE.md
 screenshots/
+bunfig.toml
+
+# Playwright MCP
 .playwright-mcp/
 reset-playwright.sh
+
+# Caches
+.cache/
+
+# Local config (not tracked, per-developer)
+CLAUDE.md
