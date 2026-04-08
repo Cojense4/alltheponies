@@ -2,8 +2,8 @@
 
 ## Current Status
 **Last Updated:** 2026-04-08
-**Tasks Completed:** 6 / 32
-**Current Task:** multi-select-tags complete
+**Tasks Completed:** 7 / 32
+**Current Task:** reset-dialog-readability complete
 
 ---
 
@@ -113,5 +113,16 @@
 - Verified in browser: SHIV + CONV selectable simultaneously, chapter counts update correctly
 - `bun run lint` (pass) and `bun run build` (pass)
 - Screenshots: `screenshots/multi-select-tags-initial.png`, `screenshots/multi-select-tags-both-active.png`, `screenshots/multi-select-tags-all.png`
+
+### 2026-04-08 — reset-dialog-readability
+- Created `src/components/ResetDialog.tsx` — modal with warning title, body text, Cancel/Reset buttons
+- Reset flow now requires 2 clicks: Reset button opens dialog → Confirm to erase, Cancel to dismiss
+- Dialog has dark overlay with backdrop-filter blur, centered card, red-styled confirm button
+- Removed strikethrough on checked items — now uses opacity (0.55) + background change only
+- Descriptions remain fully readable when items are checked
+- Cancel closes dialog and preserves progress; Confirm resets all and closes dialog
+- Backdrop click also dismisses dialog
+- `bun run lint` (pass) and `bun run build` (pass)
+- Screenshots: `screenshots/reset-dialog-checked-item.png`, `screenshots/reset-dialog-open.png`, `screenshots/reset-dialog-confirmed.png`
 
 <!-- Agent will append dated entries below -->

@@ -1,5 +1,6 @@
 import { useState, useMemo, useCallback } from "react";
 import guide from "../data";
+import ResetDialog from "../components/ResetDialog";
 import "./CollectiblesView.css";
 
 const STORAGE_KEY = "tlou-checked";
@@ -68,6 +69,7 @@ function CollectiblesView() {
   );
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
   const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set());
+  const [showResetDialog, setShowResetDialog] = useState(false);
 
   const toggleFilter = useCallback((tag: string) => {
     setActiveFilters((prev) => {
@@ -123,6 +125,7 @@ function CollectiblesView() {
   const resetAll = useCallback(() => {
     setChecked({});
     localStorage.removeItem(STORAGE_KEY);
+    setShowResetDialog(false);
   }, []);
 
   const allItems = useMemo(() => {
@@ -148,7 +151,10 @@ function CollectiblesView() {
               {checkedCount} <span>/ {totalCount}</span>
             </span>
             {checkedCount > 0 && (
-              <button className="reset-btn" onClick={resetAll}>
+              <button
+                className="reset-btn"
+                onClick={() => setShowResetDialog(true)}
+              >
                 Reset
               </button>
             )}
@@ -301,6 +307,12 @@ function CollectiblesView() {
           </div>
         );
       })}
+
+      <ResetDialog
+        open={showResetDialog}
+        onConfirm={resetAll}
+        onCancel={() => setShowResetDialog(false)}
+      />
 
       <footer className="footer">
         <p>

@@ -82,7 +82,7 @@ Transform the TLOU Collectibles Tracker into a full interactive guide with two v
       "Fix checked items: NO strikethrough on description text. Use background/opacity change instead",
       "Verify: Reset needs 2 clicks, descriptions readable when checked"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "trophy-view-basic",
