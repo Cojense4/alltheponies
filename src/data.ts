@@ -471,7 +471,7 @@ const guide: Chapter[] = [
           {
             id: "c5-7",
             tag: "COMIC",
-            name: null,
+            name: "Yellow Bridge Bus",
             desc: "When heading to the yellow bridge, jump down to an area with a large bus. The comic is on the bus. If 3 enemies appear, you've gone too far.",
           },
           {
@@ -483,13 +483,13 @@ const guide: Chapter[] = [
           {
             id: "c5-8",
             tag: "CONV",
-            name: null,
+            name: "Roadside Corpses",
             desc: "After going around the bus with the comic, stick right and look down at corpses.",
           },
           {
             id: "c5-9",
             tag: "CONV",
-            name: null,
+            name: "Checkpoint Wall Writing",
             desc: "After climbing on top of the bus to the empty checkpoints, Ellie reads writing on the wall about rations.",
           },
           {
@@ -507,7 +507,7 @@ const guide: Chapter[] = [
           {
             id: "c5-12",
             tag: "FF",
-            name: null,
+            name: "Kingston Alley Pendant",
             desc: "After the checkpoint area, before entering the Kingston Bookstore, check the furthest alleyway for a pendant behind a toppled bookshelf.",
           },
           {
@@ -525,7 +525,7 @@ const guide: Chapter[] = [
           {
             id: "c5-15",
             tag: "SHIV",
-            name: null,
+            name: "Rivers Cafe Door",
             desc: "On the 2nd floor of Kingston's Bookstore, Rivers Cafe. To the right of this restaurant is a shiv door.",
           },
           {
@@ -543,7 +543,7 @@ const guide: Chapter[] = [
           {
             id: "c5-17",
             tag: "SHIV",
-            name: null,
+            name: "Regal Apartments Door",
             desc: "After leaving Kingston Bookstore, turn to Regal Apartments on your right (purple rain-cover entry). Inside this shiv door is also Mother's Letter.",
           },
           {
@@ -555,7 +555,7 @@ const guide: Chapter[] = [
           {
             id: "c5-19",
             tag: "CONV",
-            name: null,
+            name: "Girl Poster Comment",
             desc: "After the Regal Apts shiv, head away from the bridge. Ellie comments on the girl on the poster.",
           },
           {
@@ -578,7 +578,7 @@ const guide: Chapter[] = [
           {
             id: "c5-21",
             tag: "CONV",
-            name: null,
+            name: "Hotel Bar Coffee Maker",
             desc: "Inside the Hotel Grand, head left to find a bar. Joel converses with himself at the coffee maker.",
           },
           {
@@ -602,7 +602,7 @@ const guide: Chapter[] = [
           {
             id: "c5-24",
             tag: "CONV",
-            name: null,
+            name: "Rooftop Bathtub Bodies",
             desc: "On a rooftop area, after clearing Hunters, proceed until you go up a floor. Inside a bathroom is a bathtub with dead bodies.",
           },
           {
@@ -614,13 +614,13 @@ const guide: Chapter[] = [
           {
             id: "c5-26",
             tag: "COMIC",
-            name: null,
+            name: "Hotel Shimmy Bar",
             desc: "Once you reunite with Ellie and climb the ladder, before dropping down look left for a bar area. Shimmy over to find the comic on a table.",
           },
           {
             id: "c5-27",
             tag: "FF",
-            name: null,
+            name: "Women's Restroom Pendant",
             desc: "After dropping down, find bathrooms on the left wall. In the Women's room, far stall has a pendant on the ground.",
           },
           {
@@ -632,7 +632,7 @@ const guide: Chapter[] = [
           {
             id: "c5-29",
             tag: "CONV",
-            name: null,
+            name: "Piano Stage Backdrop",
             desc: "In the big room with a piano on stage, go to the camera and oceanic backdrop in the corner. Ellie has 3 conversations back-to-back.",
           },
         ],
@@ -643,7 +643,7 @@ const guide: Chapter[] = [
           {
             id: "c5-30",
             tag: "CONV",
-            name: null,
+            name: "Hung Hunter Tree",
             desc: "After Joel gives Ellie her gun, examine the hung hunter by the tree.",
           },
           {
@@ -673,25 +673,25 @@ const guide: Chapter[] = [
           {
             id: "c5-35",
             tag: "SHIV",
-            name: null,
+            name: "Credit Union Door",
             desc: "Inside the HS&L Credit Union.",
           },
           {
             id: "c5-36",
             tag: "CONV",
-            name: null,
+            name: "Dead Soldiers Graffiti",
             desc: "Outside HS&L Credit Union, graffiti says 'Death for Freedom' next to the fire escape. Ellie stands by three dead soldiers.",
           },
           {
             id: "c5-37",
             tag: "CONV",
-            name: null,
+            name: "Military Prep School",
             desc: "Past a concrete wall, on the right is a Military Prep School gate. Ellie has something to say.",
           },
           {
             id: "c5-38",
             tag: "CONV",
-            name: null,
+            name: "Wolf Billboard",
             desc: "Further from the Military school, a big billboard with a Wolf movie advertisement.",
           },
         ],
@@ -708,19 +708,19 @@ const guide: Chapter[] = [
           {
             id: "c5-40",
             tag: "SHIV",
-            name: null,
+            name: "Stairwell Floor Door",
             desc: "Heading down stairs after meeting Henry and Sam, a shiv door on one of the floors. Comic inside too.",
           },
           {
             id: "c5-41",
             tag: "COMIC",
-            name: null,
+            name: "Stairwell Shiv Room",
             desc: "Inside the shiv door while heading down stairs after meeting Henry and Sam.",
           },
           {
             id: "c5-42",
             tag: "FF",
-            name: null,
+            name: "Suite 3000 Bathroom Pendant",
             desc: "Before heading into Suite 3000, explore the left side area to find a bathroom. On top of a toilet tank is a pendant.",
           },
           {
@@ -743,13 +743,13 @@ const guide: Chapter[] = [
           {
             id: "c6-1",
             tag: "FF",
-            name: null,
+            name: "Beached Ship Pendant",
             desc: "Explore the beached ship at the start. Crouch through the hole on the side to find a pendant in the nets.",
           },
           {
             id: "c6-2",
             tag: "COMIC",
-            name: null,
+            name: "Ship Cabin Comic",
             desc: "On the beach, search the nearby ship's cabin for a comic.",
           },
           {
