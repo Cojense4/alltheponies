@@ -903,19 +903,19 @@ const guide: Chapter[] = [
           {
             id: "c7-1",
             tag: "COMIC",
-            name: null,
+            name: "Riverbed Rock Comic",
             desc: "Down the riverbed, before reaching the bridge, climb rocks on the right for a comic.",
           },
           {
             id: "c7-2",
             tag: "SHIV",
-            name: null,
+            name: "Power Plant Door",
             desc: "At the hydroelectric power plant, shiv the door near the running water.",
           },
           {
             id: "c7-3",
             tag: "CONV",
-            name: null,
+            name: "Teddy Bear Grave Chat",
             desc: "After crossing the running water, head left down the bank. Hop over a log to find a grave with a teddy bear.",
           },
           {
@@ -927,13 +927,13 @@ const guide: Chapter[] = [
           {
             id: "c7-5",
             tag: "CONV",
-            name: null,
+            name: "Horse Stable Chat",
             desc: "Enter the power plant. Ellie spots horses. Conversation after she talks about riding one.",
           },
           {
             id: "c7-6",
             tag: "CONV",
-            name: null,
+            name: "Catwalk Patrol Chat",
             desc: "After Tommy offers you a picture, on the metal catwalk head right to find a woman on patrol with a rifle.",
           },
           {
@@ -945,7 +945,7 @@ const guide: Chapter[] = [
           {
             id: "c7-8",
             tag: "FF",
-            name: null,
+            name: "Turbine Room Pendant",
             desc: "Following Tommy to the Turbines, head left instead. Down the stairs, enter a small room. Inside a cabinet is the pendant.",
           },
           {
@@ -962,13 +962,13 @@ const guide: Chapter[] = [
           {
             id: "c7-10",
             tag: "FF",
-            name: null,
+            name: "Golden Pines Pendant",
             desc: "Enter the Golden Pines Corral house. In the back rooms on a desk is the pendant.",
           },
           {
             id: "c7-11",
             tag: "COMIC",
-            name: null,
+            name: "Board Game Room Comic",
             desc: "Upstairs in the house, first room on the left. A comic by a window near board games.",
           },
         ],
@@ -985,7 +985,7 @@ const guide: Chapter[] = [
           {
             id: "c8-1",
             tag: "COMIC",
-            name: null,
+            name: "Car Hood Comic",
             desc: "Before entering the University, turn the horse around. At the end on the hood of a car is the comic.",
           },
           {
@@ -997,13 +997,13 @@ const guide: Chapter[] = [
           {
             id: "c8-3",
             tag: "CONV",
-            name: null,
+            name: "Football Building Chat",
             desc: "Past the main gate, jump over a barrier and look at the large building on the left. Conversation about football.",
           },
           {
             id: "c8-4",
             tag: "FF",
-            name: null,
+            name: "Science Building Tree Pendant",
             desc: "Before heading inside the caved-in buildings, look opposite the Science building for a tree with a pendant.",
           },
           {
@@ -1015,7 +1015,7 @@ const guide: Chapter[] = [
           {
             id: "c8-6",
             tag: "FF",
-            name: null,
+            name: "Dumpster Building Pendant",
             desc: "After opening the first gate with the generator, explore the right side for a dumpster to climb into a side building.",
           },
           {
@@ -1027,7 +1027,7 @@ const guide: Chapter[] = [
           {
             id: "c8-8",
             tag: "CONV",
-            name: null,
+            name: "Firefly Symbol Chat",
             desc: "Riding with Ellie past monkeys, look for a Firefly symbol spray painted on a building wall.",
           },
           {
@@ -1045,7 +1045,7 @@ const guide: Chapter[] = [
           {
             id: "c8-11",
             tag: "FF",
-            name: null,
+            name: "Dorm Bloater Pendant",
             desc: "In the spore-infested dorms area, kill the Bloater to reveal a pendant.",
           },
           {
@@ -1057,7 +1057,7 @@ const guide: Chapter[] = [
           {
             id: "c8-13",
             tag: "FF",
-            name: null,
+            name: "Perimeter Tent Pendant",
             desc: "At the Science Building perimeter, inside one of the tents in the corner of this area.",
           },
         ],
@@ -1068,13 +1068,13 @@ const guide: Chapter[] = [
           {
             id: "c8-14",
             tag: "SHIV",
-            name: null,
+            name: "Lecture Room Door",
             desc: "Room 104, Lecture Room at the end of the hall. Shiv Door with manual and tools inside.",
           },
           {
             id: "c8-15",
             tag: "TOOL",
-            name: null,
+            name: "Lecture Room Tools",
             desc: "Inside the Room 104 Shiv Door.",
           },
           {
@@ -1086,7 +1086,7 @@ const guide: Chapter[] = [
           {
             id: "c8-17",
             tag: "CONV",
-            name: null,
+            name: "Medical Clipboard Chat",
             desc: "Before using stairs to head up, examine the luggage for Joel to review the medical clipboard.",
           },
           {
@@ -1110,7 +1110,7 @@ const guide: Chapter[] = [
           {
             id: "c8-21",
             tag: "FF",
-            name: null,
+            name: "Monkey Lab Pendant",
             desc: "In the monkey area, on the far wall on a shelf.",
           },
           {
@@ -1187,31 +1187,31 @@ const guide: Chapter[] = [
           {
             id: "c9-10",
             tag: "COMIC",
-            name: null,
+            name: "Deer Trail Cabin Comic",
             desc: "When Ellie follows the deer's blood trail into a cabin, head left into a room. Comic inside the desk drawer.",
           },
           {
             id: "c9-11",
             tag: "FF",
-            name: null,
+            name: "Clicker Room Pendant",
             desc: "When Ellie gets a boost for a ladder, a Clicker is in a small room. On top of a crate is the pendant.",
           },
           {
             id: "c9-12",
             tag: "CONV",
-            name: null,
+            name: "Dead Corpses Chat",
             desc: "The old man tells Ellie to watch her language. Inside the next area, near two dead corpses triggers a conversation.",
           },
           {
             id: "c9-13",
             tag: "FF",
-            name: null,
+            name: "Gazebo Pendant",
             desc: "After separating from your horse and clearing a cabin, directly right is a small gazebo with a pendant.",
           },
           {
             id: "c9-14",
             tag: "COMIC",
-            name: null,
+            name: "Nature Path Comic",
             desc: "On the Nature Path, after crawling through a small tunnel, look left to an area with green benches.",
           },
         ],
@@ -1228,7 +1228,7 @@ const guide: Chapter[] = [
           {
             id: "c9-16",
             tag: "SHIV",
-            name: null,
+            name: "Blizzard Motel Door",
             desc: "As Joel in the snowy blizzard, take shelter in a Motel. Out the bathroom window, turn left for a shiv door.",
           },
           {
@@ -1263,7 +1263,7 @@ const guide: Chapter[] = [
           {
             id: "c10-1",
             tag: "CONV",
-            name: null,
+            name: "Guitar Lesson Chat",
             desc: "Spring time. Joel will talk about teaching Ellie six-string guitar.",
           },
           {
@@ -1275,13 +1275,13 @@ const guide: Chapter[] = [
           {
             id: "c10-3",
             tag: "CONV",
-            name: null,
+            name: "Airline Dreams Chat",
             desc: "After grabbing items in the RV, Ellie is in front of an airline advertisement. Speak about her dreams.",
           },
           {
             id: "c10-4",
             tag: "FF",
-            name: null,
+            name: "School Bus Pendant",
             desc: "Off the Freeway Exit, a school bus on the left. Go around to where the wall ends, find orange barrels.",
           },
           {
@@ -1293,37 +1293,37 @@ const guide: Chapter[] = [
           {
             id: "c10-6",
             tag: "CONV",
-            name: null,
+            name: "Bus Station Ladder Chat",
             desc: "Joel and the ladder inside the bus station.",
           },
           {
             id: "c10-7",
             tag: "CONV",
-            name: null,
+            name: "Giraffe Encounter Chat",
             desc: "Interact with the giraffe.",
           },
           {
             id: "c10-8",
             tag: "CONV",
-            name: null,
+            name: "Giraffe Overlook Chat",
             desc: "When Ellie watches the landscape with giraffes, interact for a conversation and cutscene.",
           },
           {
             id: "c10-9",
             tag: "COMIC",
-            name: null,
+            name: "Restroom Comic",
             desc: "After viewing the giraffes, go right instead of left down the stairs. Inside the Men's restroom is the comic.",
           },
           {
             id: "c10-10",
             tag: "TOOL",
-            name: null,
+            name: "Triage Tent Tools",
             desc: "At the triage area, inside the tents.",
           },
           {
             id: "c10-11",
             tag: "FF",
-            name: null,
+            name: "Triage Light Stand Pendant",
             desc: "At the triage area, stick left near the tents. Before going through the bus, find a giant light stand with the pendant.",
           },
           {
@@ -1335,7 +1335,7 @@ const guide: Chapter[] = [
           {
             id: "c10-13",
             tag: "CONV",
-            name: null,
+            name: "Ellie Photo Chat",
             desc: "At the bus in the triage area. Ellie gives you a photo.",
           },
         ],
@@ -1346,7 +1346,7 @@ const guide: Chapter[] = [
           {
             id: "c10-14",
             tag: "FF",
-            name: null,
+            name: "Tunnel Entrance Pendant",
             desc: "Before going into the tunnel, search the front of the bus at the entrance.",
           },
           {
@@ -1358,13 +1358,13 @@ const guide: Chapter[] = [
           {
             id: "c10-16",
             tag: "COMIC",
-            name: null,
+            name: "Ventilation Shaft Comic",
             desc: "After setting up the ladder for Ellie, a ventilation shaft on the left. Go to the end.",
           },
           {
             id: "c10-17",
             tag: "SHIV",
-            name: null,
+            name: "Workbench Corridor Door",
             desc: "Past the workbench, go right instead of left. At the end is a shiv door.",
           },
         ],
@@ -1393,13 +1393,13 @@ const guide: Chapter[] = [
           {
             id: "c11-3",
             tag: "SHIV",
-            name: null,
+            name: "Hospital 6th Floor Door",
             desc: "On the 6th floor, a room requiring a shiv. Firefly pendant inside.",
           },
           {
             id: "c11-4",
             tag: "FF",
-            name: null,
+            name: "Hospital Shiv Room Pendant",
             desc: "Inside the 6th floor shiv door room.",
           },
           {
@@ -1428,7 +1428,7 @@ const guide: Chapter[] = [
           {
             id: "c12-1",
             tag: "COMIC",
-            name: null,
+            name: "Field Broken Car Comic",
             desc: "After climbing between the barbed wire, walk through fields with Joel. Veer right to find a broken down car.",
           },
         ],
