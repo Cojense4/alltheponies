@@ -92,4 +92,16 @@
 - `bun run lint` (pass) and `bun run build` (pass)
 - Screenshot: `screenshots/favicon.png`
 
+### 2026-04-08 — collapsible-sections
+- Made sub-section headers collapsible with independent open/close state (default open)
+- Added select-all checkbox per sub-section that checks/unchecks all visible items (respects active tag filter)
+- Added checked/total count display on each section header (e.g., "5 / 5")
+- Section and chapter collapse are fully independent
+- New state: `openSections` (Record<string, boolean>), keyed by `${chapterIndex}-${sectionIndex}`
+- New callbacks: `toggleSection`, `toggleSelectAll`
+- New CSS: `.section-header`, `.section-header-left`, `.section-toggle`, `.section-meta`, `.section-count`, `.section-select-all`
+- `bun run lint` (pass) and `bun run build` (pass)
+- Verified in browser: collapse/expand works, select-all checks all items, counters update, filter respects tags
+- Screenshots: `screenshots/collapsible-sections-initial.png`, `screenshots/collapsible-sections-collapsed.png`, `screenshots/collapsible-sections-selectall.png`, `screenshots/collapsible-sections-filter.png`
+
 <!-- Agent will append dated entries below -->

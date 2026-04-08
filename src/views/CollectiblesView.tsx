@@ -66,6 +66,7 @@ function CollectiblesView() {
       return initial;
     },
   );
+  const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
 
   const toggle = useCallback((id: string) => {
@@ -84,6 +85,28 @@ function CollectiblesView() {
   const toggleChapter = useCallback((i: number) => {
     setOpenChapters((prev) => ({ ...prev, [i]: !prev[i] }));
   }, []);
+
+  const toggleSection = useCallback((key: string) => {
+    setOpenSections((prev) => ({ ...prev, [key]: !(prev[key] ?? true) }));
+  }, []);
+
+  const toggleSelectAll = useCallback(
+    (items: { id: string }[], allChecked: boolean) => {
+      setChecked((prev) => {
+        const next = { ...prev };
+        for (const item of items) {
+          if (allChecked) {
+            delete next[item.id];
+          } else {
+            next[item.id] = true;
+          }
+        }
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+        return next;
+      });
+    },
+    [],
+  );
 
   const resetAll = useCallback(() => {
     setChecked({});
@@ -185,31 +208,68 @@ function CollectiblesView() {
                     : section.items;
                   if (sectionItems.length === 0) return null;
 
+                  const sectionKey = `${ci}-${si}`;
+                  const isSectionOpen = openSections[sectionKey] ?? true;
+                  const sectionCheckedCount = sectionItems.filter(
+                    (item) => checked[item.id],
+                  ).length;
+                  const allSectionChecked =
+                    sectionItems.length > 0 &&
+                    sectionCheckedCount === sectionItems.length;
+
                   return (
                     <div className="section" key={si}>
-                      <div className="section-name">{section.name}</div>
-                      {sectionItems.map((item) => (
-                        <div
-                          key={item.id}
-                          className={`item ${checked[item.id] ? "checked" : ""}`}
-                          onClick={() => toggle(item.id)}
-                        >
-                          <div className="item-checkbox">
+                      <div
+                        className="section-header"
+                        onClick={() => toggleSection(sectionKey)}
+                      >
+                        <div className="section-header-left">
+                          <span
+                            className={`section-toggle ${isSectionOpen ? "open" : ""}`}
+                          >
+                            <Chevron />
+                          </span>
+                          <span className="section-name">{section.name}</span>
+                        </div>
+                        <div className="section-meta">
+                          <span className="section-count">
+                            <span className="done">{sectionCheckedCount}</span>{" "}
+                            / {sectionItems.length}
+                          </span>
+                          <div
+                            className={`section-select-all ${allSectionChecked ? "checked" : ""}`}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              toggleSelectAll(sectionItems, allSectionChecked);
+                            }}
+                          >
                             <Check />
                           </div>
-                          <div className="item-content">
-                            <div className="item-top-row">
-                              <span className={`tag tag-${item.tag}`}>
-                                {item.tag}
-                              </span>
-                              {item.name && (
-                                <span className="item-name">{item.name}</span>
-                              )}
-                            </div>
-                            <div className="item-desc">{item.desc}</div>
-                          </div>
                         </div>
-                      ))}
+                      </div>
+                      {isSectionOpen &&
+                        sectionItems.map((item) => (
+                          <div
+                            key={item.id}
+                            className={`item ${checked[item.id] ? "checked" : ""}`}
+                            onClick={() => toggle(item.id)}
+                          >
+                            <div className="item-checkbox">
+                              <Check />
+                            </div>
+                            <div className="item-content">
+                              <div className="item-top-row">
+                                <span className={`tag tag-${item.tag}`}>
+                                  {item.tag}
+                                </span>
+                                {item.name && (
+                                  <span className="item-name">{item.name}</span>
+                                )}
+                              </div>
+                              <div className="item-desc">{item.desc}</div>
+                            </div>
+                          </div>
+                        ))}
                     </div>
                   );
                 })}

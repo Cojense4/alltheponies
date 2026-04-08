@@ -58,7 +58,7 @@ Transform the TLOU Collectibles Tracker into a full interactive guide with two v
       "Chapter and sub-section collapse are independent",
       "Verify: collapse/expand works, select-all respects filters"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "multi-select-tags",
