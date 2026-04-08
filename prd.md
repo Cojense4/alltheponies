@@ -43,7 +43,7 @@ Transform the TLOU Collectibles Tracker into a full interactive guide with two v
       "Verify: collectibles works as before at /#/",
       "Verify: bun run build and bun run lint pass"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "trophy-data-module",
