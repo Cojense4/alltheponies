@@ -29,7 +29,7 @@ Transform the TLOU Collectibles Tracker into a full interactive guide with two v
       "Update CLAUDE.md to note routing was added",
       "Verify: bun run build succeeds, /#/ and /#/trophies work"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "extract-collectibles",
