@@ -58,7 +58,7 @@ Transform the TLOU Collectibles Tracker into a full interactive guide with two v
       "Export: allTrophySections, roadmapStages, tipsAndStrategies, category summaries",
       "Verify: bun run build — strict types, no 'as any'"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "name-items-ch2-6",
