@@ -1,0 +1,711 @@
+{
+  "game": "The Last of Us Remastered",
+  "platform": "PS4",
+  "sources": [
+    "https://www.playstationtrophies.org/game/the-last-of-us-remastered/guide/",
+    "https://psnprofiles.com/guide/6004-the-last-of-us-remastered-trophy-guide"
+  ],
+  "overview": {
+    "total_trophies": 50,
+    "trophy_counts": {
+      "platinum": 1,
+      "gold": 9,
+      "silver": 18,
+      "bronze": 22
+    },
+    "total_points": 1980,
+    "estimated_difficulty": "4-6/10",
+    "estimated_time": "40-70+ hours",
+    "minimum_playthroughs": 2,
+    "offline_trophies": 19,
+    "online_trophies": 5,
+    "missable_trophies_note": "0 missable via Chapter Select (but some collectible trophies are buggy with Chapter Select)",
+    "glitched_trophies": "Yes - a large number of collectible trophies can glitch. BFFs and Picked Clean (Left Behind) also reported glitched.",
+    "difficulty_trophies_stack": true
+  },
+  "roadmap": {
+    "recommended_playthrough_order": [
+      {
+        "stage": 1,
+        "title": "Completing the Game & Collectibles/Missables",
+        "description": "Play through the game on any difficulty (or jump straight to Survivor/Grounded for efficiency). Collect all collectibles, do all optional conversations, Ellie's jokes, craft every item, open all shiv doors. Gather supplements and parts for upgrades. The fastest path is to start on Survivor difficulty immediately.",
+        "exploit_note": "There is an exploit where you can complete the game on Easy and NG+ on Survivor and still get all difficulty trophies. Complete the prologue on available difficulty, quit to menu, restart NG+ on hardest difficulty.",
+        "trophies_available": [
+          "Look for the Light", "Endure and Survive", "It was all just lying there",
+          "I got this", "Scavenger", "Let's gear up", "Master of Unlocking",
+          "I want to talk about it", "That's all I got",
+          "No Matter What - Easy", "No Matter What - Normal",
+          "No Matter What - Hard", "No Matter What - Survivor"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "New Game Plus & Upgrades",
+        "description": "Complete New Game Plus on Survivor+ (or Grounded+) difficulty. Focus on collecting supplements to max out Joel and parts to upgrade all weapons. Pick up anything missed in first run. Use the Survivor+ workaround to skip a separate Survivor playthrough.",
+        "trophies_available": [
+          "Everything we've been through", "For emergencies only",
+          "The Last of Us - Easy +", "The Last of Us - Normal +",
+          "The Last of Us - Hard +", "The Last of Us - Survivor +"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "New Game++ (if needed)",
+        "description": "Only required if you haven't finished upgrading all weapons after 2 playthroughs. Can lower difficulty for this run since supplies are more plentiful on lower difficulties."
+      },
+      {
+        "stage": 4,
+        "title": "Collectibles Clean Up via Chapter Select",
+        "description": "If still missing any of the 141 collectibles, grab them via Chapter Select. The Chapter Select menu shows which ones you are missing. Any difficulty is fine. Note: doing collectibles via Chapter Select may cause glitches - play the final chapter (Jackson) afterwards to trigger a 'scan' that may fix missing trophies."
+      },
+      {
+        "stage": 5,
+        "title": "Multiplayer",
+        "description": "Complete both Firefly and Hunter journeys (84 matches each = 168 total). Build clan to 40 people. Win a Supply Raid and Survivors match. You can skip days by leaving matches to save time, but be careful not to let your whole clan die. PS3 servers are closed; PS4 servers still active.",
+        "trophies_available": [
+          "Knowing the Basics", "Populace", "Firefly", "Hunter"
+        ]
+      }
+    ],
+    "tips_and_strategies": [
+      "Always keep 1-2 shivs for shiv doors - they contain parts, supplements, crafting items, and sometimes collectibles.",
+      "Download patch 1.01 for camera mode which can be used to pause time and check surroundings for enemies.",
+      "Most encounters can be skipped by sneaking past enemies - don't rush into battle.",
+      "Use arrows over guns when possible since arrows can be retrieved from bodies.",
+      "Hold the aim button on any weapon or a brick to walk at slowest speed past clickers without being detected.",
+      "Let AI partners fight for you - Ellie has infinite ammo and can kill enemies with her knife. Bill and Tommy also have infinite ammo.",
+      "When playing as Ellie, use brick/bottle to stun enemies then kill with one knife stab.",
+      "Listen for the humming sound that gets louder when enemies are close to spotting you.",
+      "Infinite shiv trick: With 2 melee weapons and a full blade+binding, pick up weapon, upgrade it, swap weapons to regular and back - you'll have blade+binding again. Repeat for multiple shivs.",
+      "Difficulty exploit: Change difficulty without confirming it (works only during NG, not NG+).",
+      "On Survivor difficulty, Listening ability is disabled and supplies are much rarer.",
+      "For collectibles, do them all in one playthrough to minimize glitch chances."
+    ]
+  },
+  "base_game_trophies": [
+    {
+      "id": 0,
+      "name": "It can't be for nothing",
+      "type": "Platinum",
+      "description": "Platinum Trophy",
+      "missable": false,
+      "story_related": false,
+      "online_required": false,
+      "tags": [],
+      "guide": "Collect all other trophies to unlock this trophy."
+    },
+    {
+      "id": 1,
+      "name": "Look for the Light",
+      "type": "Silver",
+      "description": "Find all Firefly Pendants",
+      "missable": false,
+      "story_related": false,
+      "online_required": false,
+      "tags": ["collectable"],
+      "guide": "There are 30 Firefly pendants hidden throughout the game. They are silver necklace/dog tags worn by Firefly members. They glow and shimmer in the environment. Often found hanging from trees (throw a bottle/brick or shoot to drop them), tucked away in corners off the beaten path, or found underwater during water sections. They are among the better-hidden collectibles. Refer to Scavenger for a full video guide."
+    },
+    {
+      "id": 2,
+      "name": "Endure and Survive",
+      "type": "Bronze",
+      "description": "Collect all comics",
+      "missable": false,
+      "story_related": false,
+      "online_required": false,
+      "tags": ["collectable"],
+      "guide": "There are 14 comic books hidden throughout the game. You start finding them after a cutscene at the end of Chapter 4 where Ellie reads a comic. They look like a speech bubble icon when picked up. They glow and shimmer in the environment. Refer to Scavenger for a full video guide."
+    },
+    {
+      "id": 3,
+      "name": "It was all just lying there",
+      "type": "Silver",
+      "description": "Find all artifacts",
+      "missable": false,
+      "story_related": false,
+      "online_required": false,
+      "tags": ["collectable"],
+      "guide": "There are 85 artifacts hidden throughout the game. Artifacts is a general term covering notes, maps, voice recorders, etc. They glow and shimmer in the environment. The pick-up icon looks like a note/piece of paper. Reading/examining each adds backstory. Refer to Scavenger for a full video guide."
+    },
+    {
+      "id": 4,
+      "name": "I got this",
+      "type": "Bronze",
+      "description": "Find all training manuals",
+      "missable": false,
+      "story_related": false,
+      "online_required": false,
+      "tags": ["collectable"],
+      "guide": "There are 12 training manuals hidden around the world. Training manuals are upgrades for Molotovs, smoke bombs, etc. Refer to Scavenger for a full video guide."
+    },
+    {
+      "id": 5,
+      "name": "Scavenger",
+      "type": "Gold",
+      "description": "Found all collectibles",
+      "missable": false,
+      "story_related": false,
+      "online_required": false,
+      "tags": ["collectable", "buggy"],
+      "guide": "Pops after gathering all 141 collectibles: 85 artifacts, 30 Firefly pendants, 14 comics, and 12 training manuals. The trophy sometimes pops early during the last chapter (marked buggy). If you collect something and die or quit before a checkpoint, it will not save. Collectibles viewable in chapter select menu and backpack. Some users have experienced glitches - recommended to collect everything in one playthrough rather than using chapter select. If using chapter select, play the final chapter (Jackson) afterward to trigger a save scan."
+    },
+    {
+      "id": 6,
+      "name": "Let's gear up",
+      "type": "Bronze",
+      "description": "Craft every item",
+      "missable": true,
+      "story_related": false,
+      "online_required": false,
+      "tags": ["collectable", "missable"],
+      "guide": "Technically missable but practically impossible to miss. Press touchpad to open backpack and craft. Items to craft: Upgraded melee weapon (melee weapon + blade + binding), Shiv (blade + binding), Medkit (rag + alcohol), Molotov (rag + alcohol), Nail bomb (blade + explosive), Smoke bomb (explosive + sugar)."
+    },
+    {
+      "id": 7,
+      "name": "Master of Unlocking",
+      "type": "Bronze",
+      "description": "Unlock all shiv doors",
+      "missable": true,
+      "story_related": false,
+      "online_required": false,
+      "tags": ["collectable", "missable"],
+      "guide": "There are 13 shiv doors total. Each requires a shiv with full durability to open (the shiv breaks upon opening). Behind the doors you find parts, supplements, crafting items, and sometimes collectibles. Save shivs specifically for doors. On Survivor difficulty, be especially careful not to waste shivs on Clickers. Refer to Scavenger for all locations."
+    },
+    {
+      "id": 8,
+      "name": "Everything we've been through",
+      "type": "Silver",
+      "description": "Fully upgrade Joel with supplements",
+      "missable": false,
+      "story_related": false,
+      "online_required": false,
+      "tags": [],
+      "guide": "Likely earned during New Game Plus due to limited supplements. Supplements found as bottles of pills or plants. On Survivor+ hearing ability doesn't need upgrading. Upgrades and costs: Maximum health (50+100), Crafting speed (25+30+50), Healing speed (30+40+50), Weapon sway (50+100), Shiv master (75+150). Save shivs for doors as they often contain supplements."
+    },
+    {
+      "id": 9,
+      "name": "For emergencies only",
+      "type": "Gold",
+      "description": "Fully upgrade all weapons",
+      "missable": false,
+      "story_related": false,
+      "online_required": false,
+      "tags": [],
+      "guide": "Likely earned during New Game Plus due to limited parts. Parts scattered around the world, used at crafting tables. Need 5 tool levels found throughout the game. Parts carry over to NG+. Consider saving parts for weapons received later (Flame Thrower, El Diablo). Weapons and part costs: 9mm Pistol (Ch.2, 255 parts), Revolver (Ch.3, 155 parts), Hunting Rifle (Ch.3, 375 parts), Shotgun (Ch.4, 470 parts), Bow (Ch.4, 230 parts), Shorty (Ch.6, 495 parts), El Diablo (Ch.7, 370 parts), Flame Thrower (Ch.8, 160 parts)."
+    },
+    {
+      "id": 10,
+      "name": "I want to talk about it",
+      "type": "Silver",
+      "description": "Engage in all optional conversations",
+      "missable": true,
+      "story_related": false,
+      "online_required": false,
+      "tags": ["collectable", "missable", "buggy"],
+      "guide": "There are 37 conversations/interactions required (though you encounter more than 37 total). Press triangle when the prompt appears near people or items. Track progress in the stats menu. Marked as buggy. Refer to Scavenger for full video walkthrough."
+    },
+    {
+      "id": 11,
+      "name": "No Matter What - Easy",
+      "type": "Bronze",
+      "description": "Complete the game on Easy",
+      "missable": false,
+      "story_related": true,
+      "online_required": false,
+      "tags": ["story", "stackable"],
+      "guide": "Complete the game on Easy difficulty. Stacks with higher difficulties."
+    },
+    {
+      "id": 12,
+      "name": "No Matter What - Normal",
+      "type": "Silver",
+      "description": "Complete the game on Normal",
+      "missable": false,
+      "story_related": true,
+      "online_required": false,
+      "tags": ["story", "stackable", "difficulty_specific"],
+      "guide": "Complete the game on Normal difficulty. Also unlocks Easy trophy. See No Matter What - Survivor for tips."
+    },
+    {
+      "id": 13,
+      "name": "No Matter What - Hard",
+      "type": "Silver",
+      "description": "Complete the game on Hard",
+      "missable": false,
+      "story_related": true,
+      "online_required": false,
+      "tags": ["story", "stackable", "difficulty_specific"],
+      "guide": "Complete the game on Hard difficulty. Also unlocks Normal and Easy trophies. See No Matter What - Survivor for tips."
+    },
+    {
+      "id": 14,
+      "name": "No Matter What - Survivor",
+      "type": "Gold",
+      "description": "Complete the game on Survivor",
+      "missable": false,
+      "story_related": true,
+      "online_required": false,
+      "tags": ["story", "stackable", "difficulty_specific"],
+      "guide": "Hardest base-game difficulty (Grounded is DLC). Unlocked after beating the game once. Supplies are much rarer, enemies have better hearing/awareness for stealth, and Listening ability is disabled. Also unlocks Hard, Normal, and Easy trophies. Not the hardest difficulty overall (Grounded DLC is harder) but still challenging - no HUD on Grounded, no hearing ability, more damage from enemies."
+    },
+    {
+      "id": 15,
+      "name": "The Last of Us - Easy +",
+      "type": "Silver",
+      "description": "Complete the game on Easy +",
+      "missable": false,
+      "story_related": true,
+      "online_required": false,
+      "tags": ["story", "stackable"],
+      "guide": "Complete New Game Plus on Easy. See The Last of Us - Survivor+ for tips and the difficulty exploit."
+    },
+    {
+      "id": 16,
+      "name": "The Last of Us - Normal +",
+      "type": "Silver",
+      "description": "Complete the game on Normal +",
+      "missable": false,
+      "story_related": true,
+      "online_required": false,
+      "tags": ["story", "stackable", "difficulty_specific"],
+      "guide": "Complete New Game Plus on Normal. Also unlocks Easy+ trophy. See The Last of Us - Survivor+ for the difficulty exploit."
+    },
+    {
+      "id": 17,
+      "name": "The Last of Us - Hard +",
+      "type": "Silver",
+      "description": "Complete the game on Hard +",
+      "missable": false,
+      "story_related": true,
+      "online_required": false,
+      "tags": ["story", "stackable", "difficulty_specific"],
+      "guide": "Complete New Game Plus on Hard. Also unlocks Normal+ and Easy+ trophies. See The Last of Us - Survivor+ for the difficulty exploit."
+    },
+    {
+      "id": 18,
+      "name": "The Last of Us - Survivor +",
+      "type": "Gold",
+      "description": "Complete the game on Survivor +",
+      "missable": false,
+      "story_related": true,
+      "online_required": false,
+      "tags": ["story", "stackable", "difficulty_specific"],
+      "guide": "Complete New Game Plus on Survivor. Retains all weapon upgrades and Joel's survival skill upgrades from first playthrough (weapons must be picked up again). Also unlocks Hard+, Normal+, and Easy+ trophies. EXPLOIT: Start NG+ on available difficulty, complete the prologue, quit to main menu, start NG+ again on hardest difficulty. This allows getting all difficulty trophies in one NG+ run. Recommended to play NG+ immediately after finishing story while encounters are fresh."
+    },
+    {
+      "id": 19,
+      "name": "Knowing the Basics",
+      "type": "Bronze",
+      "description": "Win a game of Supply Raid and Survivors in find match",
+      "missable": false,
+      "story_related": false,
+      "online_required": true,
+      "tags": ["online", "multiplayer"],
+      "guide": "Three game modes available: Supply Raid (team deathmatch - 20 lives per team, first to run out loses), Survivors (4 rounds, first to eliminate entire team), and Interrogation (not required for this trophy). Need to win one match of Supply Raid and one of Survivors. All are 4v4 matches."
+    },
+    {
+      "id": 20,
+      "name": "Populace",
+      "type": "Bronze",
+      "description": "Build your clan to 40 people in Factions",
+      "missable": false,
+      "story_related": false,
+      "online_required": true,
+      "tags": ["online", "multiplayer"],
+      "guide": "After almost each match you gain survivors for your faction. Need 40 people before they get sick or killed. Likely earned by week 4. Don't leave matches as that causes people to get sick and die."
+    },
+    {
+      "id": 21,
+      "name": "Firefly",
+      "type": "Gold",
+      "description": "Complete the Firefly Journey",
+      "missable": false,
+      "story_related": false,
+      "online_required": true,
+      "tags": ["online", "multiplayer", "grind"],
+      "guide": "Choose Firefly faction at start of MP (doesn't affect gameplay). Must complete 12 weeks (84 matches - one match = one day). Combined with Hunter journey = 168 matches total. Can skip days by leaving matches to save time, but be careful not to let entire clan die or you must restart."
+    },
+    {
+      "id": 22,
+      "name": "Hunter",
+      "type": "Gold",
+      "description": "Complete the Hunter Journey",
+      "missable": false,
+      "story_related": false,
+      "online_required": true,
+      "tags": ["online", "multiplayer", "grind"],
+      "guide": "Must complete 84 matches as Hunter faction. Same mechanics as Firefly journey. See Firefly for more information."
+    },
+    {
+      "id": 23,
+      "name": "That's all I got",
+      "type": "Gold",
+      "description": "Survive all of Ellie's jokes",
+      "missable": true,
+      "story_related": false,
+      "online_required": false,
+      "tags": ["collectable", "missable"],
+      "guide": "There are 5 moments to hear Ellie's joke puns. Triggered by pressing triangle next to Ellie when the prompt appears. These are some of the most entertaining moments in the game. Refer to Scavenger for full video walkthrough with locations."
+    }
+  ],
+  "secret_trophies_note": "The base game includes a 'Secret trophies' section. Based on the trophy list, 'That's all I got' appears to be the primary secret/hidden trophy.",
+  "dlc_left_behind": {
+    "dlc_name": "Left Behind",
+    "total_trophies": 10,
+    "trophy_counts": {
+      "silver": 1,
+      "bronze": 9
+    },
+    "estimated_difficulty": "3/10",
+    "estimated_time": "2-4 hours",
+    "minimum_playthroughs": 1,
+    "missable_trophies": "0 (Chapter Select available)",
+    "glitched_trophies": "BFFs and Picked Clean reported glitched with Chapter Select",
+    "note": "Included on PS4 disc at no extra cost. Survivor difficulty unlocked from the beginning. No character/weapon upgrades and no New Game+.",
+    "trophies": [
+      {
+        "id": 24,
+        "name": "Don't Go - Easy",
+        "type": "Bronze",
+        "description": "Finish Left Behind on Easy",
+        "missable": false,
+        "story_related": true,
+        "tags": ["story", "stackable"],
+        "guide": "Complete Left Behind on Easy. See Don't Go - Survivor for gameplay tips."
+      },
+      {
+        "id": 25,
+        "name": "Don't Go - Normal",
+        "type": "Bronze",
+        "description": "Finish Left Behind on Normal",
+        "missable": false,
+        "story_related": true,
+        "tags": ["story", "stackable"],
+        "guide": "Complete Left Behind on Normal. See Don't Go - Survivor for gameplay tips."
+      },
+      {
+        "id": 26,
+        "name": "Don't Go - Hard",
+        "type": "Bronze",
+        "description": "Finish Left Behind on Hard",
+        "missable": false,
+        "story_related": true,
+        "tags": ["story", "stackable"],
+        "guide": "Complete Left Behind on Hard. See Don't Go - Survivor for gameplay tips."
+      },
+      {
+        "id": 27,
+        "name": "Don't Go - Survivor",
+        "type": "Silver",
+        "description": "Finish Left Behind on Survivor",
+        "missable": false,
+        "story_related": true,
+        "tags": ["story", "stackable", "difficulty_specific"],
+        "guide": "Survivor is available from the start in Left Behind. Playing as Ellie with limited arsenal - cannot upgrade weapons or skills. Familiar territory for anyone who completed Survivor in main game. All difficulty trophies stack. Complete on Survivor to unlock all four difficulty trophies in one playthrough."
+      },
+      {
+        "id": 28,
+        "name": "BFFs",
+        "type": "Bronze",
+        "description": "All optional conversations found in Left Behind",
+        "missable": false,
+        "story_related": false,
+        "tags": ["collectable", "buggy"],
+        "guide": "Find all optional conversations in Left Behind. Reported as glitched when using Chapter Select - try to get them all in one playthrough. If using Chapter Select, create a separate save and don't overwrite the original."
+      },
+      {
+        "id": 29,
+        "name": "Picked Clean",
+        "type": "Bronze",
+        "description": "All Left Behind collectibles found",
+        "missable": false,
+        "story_related": false,
+        "tags": ["collectable", "buggy"],
+        "guide": "Find all collectibles (artifacts) in Left Behind. Reported as glitched when using Chapter Select - try to get them all in one playthrough."
+      },
+      {
+        "id": 30,
+        "name": "Nobody's Perfect",
+        "type": "Bronze",
+        "description": "Played Jak X Combat Racing",
+        "missable": false,
+        "story_related": false,
+        "tags": ["misc"],
+        "guide": "During a certain section, interact with the Jak X Combat Racing arcade machine. Easy to miss on first playthrough if you rush."
+      },
+      {
+        "id": 31,
+        "name": "Angel Knives",
+        "type": "Bronze",
+        "description": "Defeat Black Fang without getting hit",
+        "missable": false,
+        "story_related": false,
+        "tags": ["misc"],
+        "guide": "During the Angel Knives mini-game, defeat the Black Fang character without taking any damage. Requires learning the patterns."
+      },
+      {
+        "id": 32,
+        "name": "Skillz",
+        "type": "Bronze",
+        "description": "Win the water gun fight",
+        "missable": false,
+        "story_related": false,
+        "tags": ["misc"],
+        "guide": "Win the water gun fight mini-game section in Left Behind."
+      },
+      {
+        "id": 33,
+        "name": "Brick Master",
+        "type": "Bronze",
+        "description": "Win the brick throwing contest",
+        "missable": false,
+        "story_related": false,
+        "tags": ["misc"],
+        "guide": "Win the brick throwing contest mini-game section in Left Behind."
+      }
+    ]
+  },
+  "dlc_reclaimed_territories": {
+    "dlc_name": "Reclaimed Territories",
+    "total_trophies": 7,
+    "trophy_counts": {
+      "silver": 4,
+      "bronze": 3
+    },
+    "estimated_difficulty": "3/10 (1/10 if boosted)",
+    "estimated_time": "5+ hours (2+ hours if boosted)",
+    "note": "Multiplayer map pack DLC. Maps included on PS4 disc. All trophies can be boosted but cannot be earned in private matches. PS3 servers closed September 3, 2019.",
+    "trophies": [
+      {
+        "id": 34,
+        "name": "Wharf",
+        "type": "Silver",
+        "description": "Complete a match on Wharf with at least 5 downs or executions",
+        "missable": false,
+        "story_related": false,
+        "online_required": true,
+        "tags": ["online", "multiplayer"],
+        "guide": "Score at least 5 downs or executions in a single match on the Wharf map. Must complete the match. Not necessary to win."
+      },
+      {
+        "id": 35,
+        "name": "Capitol",
+        "type": "Silver",
+        "description": "Complete a match on Capitol with at least 5 downs or executions",
+        "missable": false,
+        "story_related": false,
+        "online_required": true,
+        "tags": ["online", "multiplayer"],
+        "guide": "Score at least 5 downs or executions in a single match on the Capitol map. Must complete the match."
+      },
+      {
+        "id": 36,
+        "name": "Coal Mine",
+        "type": "Silver",
+        "description": "Complete a match on Coal Mine with at least 5 downs or executions",
+        "missable": false,
+        "story_related": false,
+        "online_required": true,
+        "tags": ["online", "multiplayer"],
+        "guide": "Score at least 5 downs or executions in a single match on the Coal Mine map. Must complete the match."
+      },
+      {
+        "id": 37,
+        "name": "Water Tower",
+        "type": "Silver",
+        "description": "Complete a match on Water Tower with at least 5 downs or executions",
+        "missable": false,
+        "story_related": false,
+        "online_required": true,
+        "tags": ["online", "multiplayer"],
+        "guide": "Score at least 5 downs or executions in a single match on the Water Tower map. Must complete the match."
+      },
+      {
+        "id": 38,
+        "name": "Recovered Supply Raider",
+        "type": "Bronze",
+        "description": "Complete a game of Supply Raid on Wharf, Capitol, Water Tower or Coal Mine",
+        "missable": false,
+        "story_related": false,
+        "online_required": true,
+        "tags": ["online", "multiplayer"],
+        "guide": "Complete one Supply Raid match on any Reclaimed Territories map. Stacks with the map-specific trophies."
+      },
+      {
+        "id": 39,
+        "name": "Recovered Survivalist",
+        "type": "Bronze",
+        "description": "Complete a game of Survivors on Wharf, Capitol, Water Tower or Coal Mine",
+        "missable": false,
+        "story_related": false,
+        "online_required": true,
+        "tags": ["online", "multiplayer"],
+        "guide": "Complete one Survivors match on any Reclaimed Territories map. Stacks with the map-specific trophies."
+      },
+      {
+        "id": 40,
+        "name": "Recovered Interrogator",
+        "type": "Bronze",
+        "description": "Complete a game of Interrogation on Wharf, Capitol, Water Tower or Coal Mine",
+        "missable": false,
+        "story_related": false,
+        "online_required": true,
+        "tags": ["online", "multiplayer"],
+        "guide": "Complete one Interrogation match on any Reclaimed Territories map. Stacks with the map-specific trophies."
+      }
+    ]
+  },
+  "dlc_abandoned_territories": {
+    "dlc_name": "Abandoned Territories",
+    "total_trophies": 7,
+    "trophy_counts": {
+      "silver": 4,
+      "bronze": 3
+    },
+    "estimated_difficulty": "3/10 (1/10 if boosted)",
+    "estimated_time": "5+ hours (2+ hours if boosted)",
+    "note": "Multiplayer map pack DLC. Maps included on PS4 disc. All trophies can be boosted but cannot be earned in private matches.",
+    "trophies": [
+      {
+        "id": 41,
+        "name": "Bookstore",
+        "type": "Silver",
+        "description": "Complete a match on Bookstore with at least 5 downs or executions",
+        "missable": false,
+        "story_related": false,
+        "online_required": true,
+        "tags": ["online", "multiplayer"],
+        "guide": "Score at least 5 downs or executions in a single match on the Bookstore map. Must complete the match."
+      },
+      {
+        "id": 42,
+        "name": "Bus Depot",
+        "type": "Silver",
+        "description": "Complete a match on Bus Depot with at least 5 downs or executions",
+        "missable": false,
+        "story_related": false,
+        "online_required": true,
+        "tags": ["online", "multiplayer"],
+        "guide": "Score at least 5 downs or executions in a single match on the Bus Depot map. Must complete the match."
+      },
+      {
+        "id": 43,
+        "name": "Hometown",
+        "type": "Silver",
+        "description": "Complete a match on Hometown with at least 5 downs or executions",
+        "missable": false,
+        "story_related": false,
+        "online_required": true,
+        "tags": ["online", "multiplayer"],
+        "guide": "Score at least 5 downs or executions in a single match on the Hometown map. Must complete the match."
+      },
+      {
+        "id": 44,
+        "name": "Suburbs",
+        "type": "Silver",
+        "description": "Complete a match on Suburbs with at least 5 downs or executions",
+        "missable": false,
+        "story_related": false,
+        "online_required": true,
+        "tags": ["online", "multiplayer"],
+        "guide": "Score at least 5 downs or executions in a single match on the Suburbs map. Must complete the match."
+      },
+      {
+        "id": 45,
+        "name": "Forsaken Supply Raider",
+        "type": "Bronze",
+        "description": "Complete a game of Supply Raid on Bookstore, Home Town, Suburbs or Bus Depot",
+        "missable": false,
+        "story_related": false,
+        "online_required": true,
+        "tags": ["online", "multiplayer"],
+        "guide": "Complete one Supply Raid match on any Abandoned Territories map. Stacks with the map-specific trophies."
+      },
+      {
+        "id": 46,
+        "name": "Forsaken Survivalist",
+        "type": "Bronze",
+        "description": "Complete a game of Survivors on Bookstore, Home Town, Suburbs or Bus Depot",
+        "missable": false,
+        "story_related": false,
+        "online_required": true,
+        "tags": ["online", "multiplayer"],
+        "guide": "Complete one Survivors match on any Abandoned Territories map. Stacks with the map-specific trophies."
+      },
+      {
+        "id": 47,
+        "name": "Forsaken Interrogator",
+        "type": "Bronze",
+        "description": "Complete a game of Interrogation on Bookstore, Home Town, Suburbs or Bus Depot",
+        "missable": false,
+        "story_related": false,
+        "online_required": true,
+        "tags": ["online", "multiplayer"],
+        "guide": "Complete one Interrogation match on any Abandoned Territories map. Stacks with the map-specific trophies."
+      }
+    ]
+  },
+  "dlc_grounded_mode": {
+    "dlc_name": "Grounded Mode",
+    "total_trophies": 2,
+    "trophy_counts": {
+      "gold": 2
+    },
+    "estimated_difficulty": "6/10",
+    "estimated_time": "10-15 hours",
+    "minimum_playthroughs": 1,
+    "note": "Grounded is the hardest difficulty in the game. No HUD, no listening mode, extremely limited supplies, enemies deal more damage. Certain sub-chapters can glitch and not register as complete - redo the glitched sub-chapter to fix. Difficulty trophies stack between PS3 and PS4.",
+    "trophies": [
+      {
+        "id": 48,
+        "name": "Completed Grounded Mode",
+        "type": "Gold",
+        "description": "Completed Grounded Mode",
+        "missable": false,
+        "story_related": true,
+        "online_required": false,
+        "tags": ["story", "difficulty_specific"],
+        "guide": "Complete the story on Grounded difficulty. This is the game's hardest difficulty. If you have a completed NG+ save, you can skip a normal playthrough. Can be done chronologically or in reverse via Chapter Select for an easier time (playing in reverse means you start with more supplies/upgrades). Always play the final chapter (Jackson: Epilogue) last - trophies pop during or after credits."
+      },
+      {
+        "id": 49,
+        "name": "Completed Grounded Mode Plus",
+        "type": "Gold",
+        "description": "Completed Grounded Mode Plus",
+        "missable": false,
+        "story_related": true,
+        "online_required": false,
+        "tags": ["story", "difficulty_specific"],
+        "guide": "Complete NG+ on Grounded difficulty. Requires a completed NG+ save file. Can be done chronologically or in reverse via Chapter Select. Playing in reverse means you retain supplies and upgrades from previous playthrough for each chapter. The reverse method: start from second-to-last chapter, work backwards, save after each chapter, always use Chapter Select for Grounded difficulty. Play the final chapter (Jackson: Epilogue) last. If trophies don't pop, redo any sub-chapters that show as not completed on Grounded in Chapter Select."
+      }
+    ]
+  },
+  "trophy_categories_summary": {
+    "collectable_trophies": [
+      "Look for the Light", "Endure and Survive", "It was all just lying there",
+      "I got this", "Scavenger", "Let's gear up", "Master of Unlocking",
+      "I want to talk about it", "That's all I got"
+    ],
+    "missable_trophies": [
+      "Let's gear up", "Master of Unlocking", "I want to talk about it", "That's all I got"
+    ],
+    "buggy_trophies": [
+      "Scavenger", "I want to talk about it", "BFFs (Left Behind)", "Picked Clean (Left Behind)"
+    ],
+    "story_related_trophies": [
+      "No Matter What - Easy", "No Matter What - Normal", "No Matter What - Hard",
+      "No Matter What - Survivor", "The Last of Us - Easy +", "The Last of Us - Normal +",
+      "The Last of Us - Hard +", "The Last of Us - Survivor +"
+    ],
+    "online_required_trophies": [
+      "Knowing the Basics", "Populace", "Firefly", "Hunter"
+    ],
+    "grind_trophies": [
+      "Firefly", "Hunter"
+    ],
+    "difficulty_specific_trophies": [
+      "No Matter What - Normal", "No Matter What - Hard", "No Matter What - Survivor",
+      "The Last of Us - Normal +", "The Last of Us - Hard +", "The Last of Us - Survivor +"
+    ]
+  }
+}
