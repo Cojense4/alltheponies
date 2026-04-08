@@ -2,8 +2,8 @@
 
 ## Current Status
 **Last Updated:** 2026-04-08
-**Tasks Completed:** 5 / 32
-**Current Task:** favicon complete
+**Tasks Completed:** 6 / 32
+**Current Task:** multi-select-tags complete
 
 ---
 
@@ -103,5 +103,15 @@
 - `bun run lint` (pass) and `bun run build` (pass)
 - Verified in browser: collapse/expand works, select-all checks all items, counters update, filter respects tags
 - Screenshots: `screenshots/collapsible-sections-initial.png`, `screenshots/collapsible-sections-collapsed.png`, `screenshots/collapsible-sections-selectall.png`, `screenshots/collapsible-sections-filter.png`
+
+### 2026-04-08 — multi-select-tags
+- Feature was already implemented in a previous iteration (collapsible-sections work)
+- `activeFilters` is `Set<string>` for multi-select, `toggleFilter` adds/removes from set
+- Each tag button shows completion fraction (e.g., "Artifacts 0/85", "Shiv Doors 0/13")
+- Counters update in real-time as items are checked
+- "All" button clears the set, showing all items
+- Verified in browser: SHIV + CONV selectable simultaneously, chapter counts update correctly
+- `bun run lint` (pass) and `bun run build` (pass)
+- Screenshots: `screenshots/multi-select-tags-initial.png`, `screenshots/multi-select-tags-both-active.png`, `screenshots/multi-select-tags-all.png`
 
 <!-- Agent will append dated entries below -->

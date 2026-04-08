@@ -70,7 +70,7 @@ Transform the TLOU Collectibles Tracker into a full interactive guide with two v
       "Counters update in real-time. 'All' deselects all",
       "Verify: SHIV + CONV selectable simultaneously, counters accurate"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "reset-dialog-readability",
