@@ -29,3 +29,8 @@ node_modules
 CLAUDE.md
 clerk-nextjs-guide
 .cache/
+activity.md
+.gitignore
+ralph.sh
+.gitignore
+PROMPT.md
