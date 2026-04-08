@@ -27,7 +27,7 @@ const guide: Chapter[] = [
           {
             id: "c2-1",
             tag: "CONV",
-            name: null,
+            name: "Newspaper Stand Couple",
             desc: "Follow Tess out towards the street, and when you get to a clearing, a large armored vehicle will approach and stop. Look to the right by the newspaper stands for a couple to speak to.",
           },
         ],
@@ -50,13 +50,13 @@ const guide: Chapter[] = [
           {
             id: "c2-4",
             tag: "CONV",
-            name: null,
+            name: "Pizza Shop Chat",
             desc: "When you emerge into a Pizza Shop from the underground tunnels, Tess will stop at the entrance and give you an opportunity to converse.",
           },
           {
             id: "c2-5",
             tag: "FF",
-            name: null,
+            name: "Bedroom Table Pendant",
             desc: "Once you emerge from the Quarantine Zone, find a ladder to enter a house on the 2nd floor. Before heading down the stairs with Tess, explore the bedroom to find a firefly pendant on a table.",
           },
           {
@@ -68,7 +68,7 @@ const guide: Chapter[] = [
           {
             id: "c2-7",
             tag: "FF",
-            name: null,
+            name: "Alley Tree Pendant",
             desc: "Following Tess through some alleyways, you'll go under a broken railing into the next clearing. There is a tree here that has a pendant you'll need to knock down with a bullet, bottle, or brick.",
           },
         ],
@@ -114,7 +114,7 @@ const guide: Chapter[] = [
           {
             id: "c2-13",
             tag: "FF",
-            name: null,
+            name: "Street Bodies Pendant",
             desc: "When Joel and Ellie head off for the first time, you'll find 3 dead bodies in the streets. The one closest to the newspaper stands has a pendant near him.",
           },
         ],
@@ -131,7 +131,7 @@ const guide: Chapter[] = [
           {
             id: "c3-1",
             tag: "CONV",
-            name: null,
+            name: "Window Chat with Tess",
             desc: "At the very beginning, talk to Tess at the window.",
           },
           {
@@ -160,13 +160,13 @@ const guide: Chapter[] = [
           {
             id: "c3-5",
             tag: "FF",
-            name: null,
+            name: "Boylstone Overlook Pendant",
             desc: "Before entering the Boylstone Building, go all the way to the end past the building's sign to an overlook. A firefly pendant can be found to the left on a tree.",
           },
           {
             id: "c3-6",
             tag: "CONV",
-            name: null,
+            name: "Boylstone Dead Soldier",
             desc: "Once inside the Boylstone Building, talk about the dead soldier in the hallway.",
           },
           {
@@ -178,7 +178,7 @@ const guide: Chapter[] = [
           {
             id: "c3-8",
             tag: "SHIV",
-            name: null,
+            name: "Post-Clicker Room Door",
             desc: "After being attacked by the Clicker and saved by Tess, go left of the room Tess and Ellie are in, and ahead will be a door that you can open with a shiv.",
           },
           {
@@ -207,19 +207,19 @@ const guide: Chapter[] = [
           {
             id: "c3-12",
             tag: "FF",
-            name: null,
+            name: "Museum Display Pendant",
             desc: "Inside the old museum, when you ascend to the next floor by walking on the caved-in flooring, stay on the left and climb up on the wall/ledge. Shimmy over to find the pendant on a broken display case.",
           },
           {
             id: "c3-13",
             tag: "SHIV",
-            name: null,
+            name: "Museum Rubble Door",
             desc: "Once Joel gets separated from Tess and Ellie, he'll crawl through the rubble. Head left and look for a door that requires a shiv.",
           },
           {
             id: "c3-14",
             tag: "CONV",
-            name: null,
+            name: "Museum Window Chat",
             desc: "After Ellie is mobbed by Infected in the Museum, save her and proceed to the window. Conversations for Tess first, then Ellie.",
           },
         ],
@@ -236,7 +236,7 @@ const guide: Chapter[] = [
           {
             id: "c3-16",
             tag: "FF",
-            name: null,
+            name: "Gazebo Pendant",
             desc: "Going through the flooded street with green murky water, before entering the Capitol Building, climb up the gazebo directly across from it.",
           },
           {
@@ -248,7 +248,7 @@ const guide: Chapter[] = [
           {
             id: "c3-18",
             tag: "FF",
-            name: null,
+            name: "Subway Shelf Pendant",
             desc: "After rejoining Ellie in the subway tunnel, beyond the artifact is an area you can access by diving underneath the rubble. On one of the shelves is a pendant.",
           },
         ],
@@ -271,19 +271,19 @@ const guide: Chapter[] = [
           {
             id: "c4-2",
             tag: "SHIV",
-            name: null,
+            name: "Fence Building Door",
             desc: "Before going beyond the fence to the main street, look on the left side for a building that has a door to use a shiv on.",
           },
           {
             id: "c4-3",
             tag: "CONV",
-            name: null,
+            name: "Arcade Machine Chat",
             desc: "Once on the main road, across the street is Anthony's Pizzas and Subs. Go inside, and Ellie will remark about the arcade machine, The Turning.",
           },
           {
             id: "c4-4",
             tag: "FF",
-            name: null,
+            name: "Jazz Club Pendant",
             desc: "In front of Mary's Famous Jazz Club is a mobile home that rammed a sheriff's car. Climb the car to the roof of the mobile home for the pendant.",
           },
           {
@@ -301,7 +301,7 @@ const guide: Chapter[] = [
           {
             id: "c4-7",
             tag: "SHIV",
-            name: null,
+            name: "Music Store Alley Door",
             desc: "In the back alley of the Marquis Music Store, you'll run into Bill's wire traps. There is a door that can be opened with a shiv.",
           },
           {
@@ -336,7 +336,7 @@ const guide: Chapter[] = [
           {
             id: "c4-12",
             tag: "CONV",
-            name: null,
+            name: "Chess Board Chat",
             desc: "Walk up ahead and look to your left towards the booths. On one of the tables is a chess board.",
           },
           {
@@ -348,7 +348,7 @@ const guide: Chapter[] = [
           {
             id: "c4-14",
             tag: "FF",
-            name: null,
+            name: "Hardtail Hank's Pendant",
             desc: "After Bill leads you out his bar towards the Graveyard, after the Infected attack, search the far end of the street for Hardtail Hank's. On the electric pole is the hanging pendant.",
           },
         ],
@@ -359,7 +359,7 @@ const guide: Chapter[] = [
           {
             id: "c4-15",
             tag: "TOOL",
-            name: null,
+            name: "Graveyard Toolbox",
             desc: "After Bill gives you the shotgun, follow him and make a left. There will be a metal shelf with a toolbox.",
           },
           {
@@ -371,7 +371,7 @@ const guide: Chapter[] = [
           {
             id: "c4-17",
             tag: "FF",
-            name: null,
+            name: "Laundry Room Pendant",
             desc: "At a fork where infected face away from you, find a house surrounded by a wooden fence. Inside, a small room has a washing machine and dryer with a Pendant on top.",
           },
           {
@@ -383,7 +383,7 @@ const guide: Chapter[] = [
           {
             id: "c4-19",
             tag: "CONV",
-            name: null,
+            name: "Boy's Room Chat",
             desc: "In the boy's room where you found Boy's Diary, Ellie will prompt you for a conversation.",
           },
         ],
@@ -400,13 +400,13 @@ const guide: Chapter[] = [
           {
             id: "c4-21",
             tag: "CONV",
-            name: null,
+            name: "Ellie in Driver's Seat",
             desc: "At Frank's house, speak to Ellie when she's in the driver's seat.",
           },
           {
             id: "c4-22",
             tag: "CONV",
-            name: null,
+            name: "Bill at the Car",
             desc: "After finding the Note from Frank, speak to Bill in front of the car.",
           },
           {
@@ -435,13 +435,13 @@ const guide: Chapter[] = [
           {
             id: "c5-1",
             tag: "COMIC",
-            name: null,
+            name: "Cutscene Comic",
             desc: "You get this automatically during the cutscene.",
           },
           {
             id: "c5-2",
             tag: "CONV",
-            name: null,
+            name: "Truck Crash Chat",
             desc: "After crashing the truck, lift the heavy metal grate. After viewing the 'gnarly stuff', Ellie will pause for conversation.",
           },
           {
@@ -453,7 +453,7 @@ const guide: Chapter[] = [
           {
             id: "c5-4",
             tag: "TOOL",
-            name: null,
+            name: "Shutter Door Toolbox",
             desc: "In the same room, find a toolbox on a metal shelf next to the metal shutter door.",
           },
           {
