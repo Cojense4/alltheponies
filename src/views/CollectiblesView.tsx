@@ -2,6 +2,7 @@ import { useState, useMemo, useCallback } from "react";
 import guide from "../data";
 import ResetDialog from "../components/ResetDialog";
 import { feedback } from "../utils/haptics";
+import DifficultySelector from "../components/DifficultySelector";
 import "./CollectiblesView.css";
 
 const STORAGE_KEY = "tlou-checked";
@@ -142,6 +143,7 @@ function CollectiblesView() {
       <header className="header">
         <h1>The Last of Us</h1>
         <div className="subtitle">Collectibles Tracker</div>
+        <DifficultySelector />
       </header>
 
       <div className="global-progress">

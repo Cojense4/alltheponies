@@ -6,6 +6,7 @@ import TrophyRoadmap from "../components/TrophyRoadmap";
 import TrophyFilters from "../components/TrophyFilters";
 import TrophyCard from "../components/TrophyCard";
 import TrophyOverlay from "../components/TrophyOverlay";
+import DifficultySelector from "../components/DifficultySelector";
 import { trophyMatchesTag } from "../utils/trophyFilters";
 import "./trophy-view.css";
 
@@ -205,6 +206,7 @@ function TrophyView() {
       <header className="header">
         <h1>The Last of Us</h1>
         <div className="subtitle">Trophy Guide</div>
+        <DifficultySelector />
       </header>
 
       <TrophyProgress trophies={visibleTrophies} earned={earned} />

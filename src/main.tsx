@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createHashRouter, RouterProvider } from "react-router";
 import "./index.css";
+import "./styles/difficulty-themes.css";
 import CollectiblesView from "./views/CollectiblesView";
 import TrophyView from "./views/TrophyView";
 import ErrorBoundary from "./components/ErrorBoundary";
