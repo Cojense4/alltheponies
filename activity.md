@@ -219,4 +219,16 @@
 - `bun run lint` (pass) and `bun run build` (pass)
 - Screenshots: `screenshots/roadmap-expanded.png`, `screenshots/roadmap-trophy-links.png`, `screenshots/roadmap-scroll-to-card.png`, `screenshots/roadmap-mobile.png`, `screenshots/roadmap-mobile-collapsed.png`
 
+### 2026-04-09 — haptics
+- Task was already fully implemented in a previous iteration
+- Verified: `src/utils/haptics.ts` exports `feedback()` with `navigator.vibrate(ms)` + feature detection (`canVibrate`)
+- Verified: Desktop visual ripple via `ripple()` — creates `<span class="haptic-ripple">` sized to element, auto-removes after animation
+- Verified: CSS `@keyframes haptic-ripple` in `src/index.css` (lines 86-114) with `prefers-reduced-motion: reduce` support (disables animation)
+- Verified: Applied to CollectiblesView — item click (line 287) and select-all (line 273) both call `feedback(e.currentTarget)`
+- Verified: Applied to TrophyCard (line 88) with dynamic intensity: `feedback(cardRef.current, earned ? 10 : 25)` — 10ms uncheck, 25ms earn
+- Verified: Applied to TrophyOverlay (line 155) with same intensity pattern
+- Verified: iOS falls back to visual-only (no `navigator.vibrate` support → `canVibrate = false`)
+- `bun run lint` (pass) and `bun run build` (pass)
+- Screenshot: `screenshots/haptics-trophies.png`
+
 <!-- Agent will append dated entries below -->

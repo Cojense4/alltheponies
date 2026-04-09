@@ -205,7 +205,7 @@ Transform the TLOU Collectibles Tracker into a full interactive guide with two v
       "Apply to both views. iOS falls back to visual only",
       "Verify: Android vibrates, desktop pulses, iOS graceful fallback"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "difficulty-selector",

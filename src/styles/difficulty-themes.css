@@ -1,0 +1,88 @@
+/* Difficulty themes — layered on top of the dark green base (:root in index.css) */
+
+/* Easy: Warm greens, softer shadows, lighter feel */
+[data-difficulty="easy"] {
+  --bg-deep: #161a12;
+  --bg-surface: #1e2319;
+  --bg-card: #242a1e;
+  --bg-card-hover: #2e3528;
+  --bg-checked: #1a1e17;
+  --border: #3d4535;
+  --border-glow: #5a6e4a;
+  --text-primary: #e2e6da;
+  --text-secondary: #a8b49a;
+  --text-muted: #6e7a60;
+  --accent: #6a8e44;
+  --accent-bright: #8cb55a;
+  --accent-glow: rgba(106, 142, 68, 0.18);
+}
+
+/* Normal: Default theme — no overrides needed (uses :root values) */
+
+/* Hard: Deeper shadows, amber accent tint layered on green */
+[data-difficulty="hard"] {
+  --bg-deep: #100e08;
+  --bg-surface: #171410;
+  --bg-card: #1c1914;
+  --bg-card-hover: #24201a;
+  --bg-checked: #13110d;
+  --border: #3a3328;
+  --border-glow: #5a4e3a;
+  --text-primary: #d8d4c8;
+  --text-secondary: #a09580;
+  --text-muted: #6a5e4a;
+  --accent: #5a7a3a;
+  --accent-bright: #b89030;
+  --accent-glow: rgba(90, 122, 58, 0.12);
+}
+
+/* Survivor: Muted, desaturated, grittier texture */
+[data-difficulty="survivor"] {
+  --bg-deep: #0e0e0c;
+  --bg-surface: #151513;
+  --bg-card: #1a1a17;
+  --bg-card-hover: #22221e;
+  --bg-checked: #121210;
+  --border: #30302a;
+  --border-glow: #444438;
+  --text-primary: #c8c8be;
+  --text-secondary: #8a8a7a;
+  --text-muted: #585850;
+  --accent: #4a6a34;
+  --accent-bright: #6a8a48;
+  --accent-glow: rgba(74, 106, 52, 0.10);
+}
+
+/* Grounded: Near-black, red accent layered on green, heavy grain */
+[data-difficulty="grounded"] {
+  --bg-deep: #0a0908;
+  --bg-surface: #110f0d;
+  --bg-card: #161311;
+  --bg-card-hover: #1e1a16;
+  --bg-checked: #0e0c0a;
+  --border: #2a2420;
+  --border-glow: #3e3430;
+  --text-primary: #c0b8b0;
+  --text-secondary: #887870;
+  --text-muted: #554a42;
+  --accent: #4a6a34;
+  --accent-bright: #a04030;
+  --accent-glow: rgba(160, 64, 48, 0.12);
+}
+
+/* Grounded+: Darkest, crimson highlights, maximum decay */
+[data-difficulty="grounded-plus"] {
+  --bg-deep: #080606;
+  --bg-surface: #0e0b0a;
+  --bg-card: #13100e;
+  --bg-card-hover: #1a1614;
+  --bg-checked: #0b0908;
+  --border: #251e1a;
+  --border-glow: #352a25;
+  --text-primary: #b8aea8;
+  --text-secondary: #807068;
+  --text-muted: #504440;
+  --accent: #3a5a28;
+  --accent-bright: #8a2020;
+  --accent-glow: rgba(138, 32, 32, 0.15);
+}
