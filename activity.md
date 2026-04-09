@@ -2,8 +2,8 @@
 
 ## Current Status
 **Last Updated:** 2026-04-08
-**Tasks Completed:** 8 / 32
-**Current Task:** trophy-view-basic complete
+**Tasks Completed:** 9 / 32
+**Current Task:** trophy-filters-search complete
 
 ---
 
@@ -147,5 +147,16 @@
 - Verified: toggling Reclaimed on changes 34→41 trophies, 1470→1635 pts; toggling Left Behind off drops to 31 trophies
 - `bun run lint` (pass) and `bun run build` (pass)
 - Screenshots: `screenshots/dlc-toggle-trophies-view.png`, `screenshots/dlc-toggle-reclaimed-on.png`, `screenshots/dlc-toggle-leftbehind-off.png`
+
+### 2026-04-09 — trophy-filters-search
+- Task was already fully implemented in a previous iteration
+- Verified: Multi-select tag filters (All, Missable, Online, Story, Collectible, Buggy) with counts
+- Verified: Text search by name and tags — "Light" finds "Look for the Light" (1 result)
+- Verified: Result count display ("4 trophies found", "8 trophies found", etc.)
+- Verified: Sections hidden when no matches (Left Behind hidden when only Missable selected)
+- Verified: Missable + Online selectable simultaneously → 8 trophies found
+- Components: TrophyFilters.tsx (tag buttons, search input), trophyFilters.ts (tag matching util)
+- `bun run lint` (pass) and `bun run build` (pass)
+- Screenshots: `screenshots/trophy-filters-search-top.png`, `screenshots/trophy-filters-search-missable.png`, `screenshots/trophy-filters-search-multi.png`, `screenshots/trophy-filters-search-name.png`
 
 <!-- Agent will append dated entries below -->

@@ -119,7 +119,7 @@ Transform the TLOU Collectibles Tracker into a full interactive guide with two v
       "Show result count. Hide sections with no matches",
       "Verify: Missable + Online selectable, search finds by name"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "trophy-card-front",
