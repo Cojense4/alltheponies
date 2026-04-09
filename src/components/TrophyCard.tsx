@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import type { Trophy, TrophyType } from "../trophyData";
 import "../styles/trophy-card.css";
 
@@ -22,17 +22,59 @@ const RARITY_ICON: Record<TrophyType, string> = {
   Bronze: "\uD83E\uDD49",
 };
 
+const MAX_TILT = 8;
+
 function TrophyCard({ trophy, earned, onToggle }: TrophyCardProps) {
   const [flipped, setFlipped] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [tilt, setTilt] = useState({
+    rotateX: 0,
+    rotateY: 0,
+    glareX: 50,
+    glareY: 50,
+  });
+  const [hovering, setHovering] = useState(false);
+
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const el = cardRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width;
+    const y = (e.clientY - rect.top) / rect.height;
+    setTilt({
+      rotateX: (0.5 - y) * MAX_TILT * 2,
+      rotateY: (x - 0.5) * MAX_TILT * 2,
+      glareX: x * 100,
+      glareY: y * 100,
+    });
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    setHovering(false);
+    setTilt({ rotateX: 0, rotateY: 0, glareX: 50, glareY: 50 });
+  }, []);
 
   const handleFlip = (e: React.MouseEvent) => {
     e.stopPropagation();
     setFlipped((prev) => !prev);
   };
 
+  const tiltStyle = hovering
+    ? ({
+        transform: `perspective(800px) rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg)`,
+        "--glare-x": `${tilt.glareX}%`,
+        "--glare-y": `${tilt.glareY}%`,
+      } as React.CSSProperties)
+    : undefined;
+
   return (
     <div
-      className={`trophy-card ${earned ? "trophy-card--earned" : "trophy-card--locked"} ${flipped ? "trophy-card--flipped" : ""}`}
+      ref={cardRef}
+      className={`trophy-card ${earned ? "trophy-card--earned" : "trophy-card--locked"} ${flipped ? "trophy-card--flipped" : ""} ${hovering ? "trophy-card--hovering" : ""}`}
+      style={tiltStyle}
+      onMouseEnter={() => setHovering(true)}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
       onClick={() => {
         if (!flipped) onToggle(trophy.id);
       }}

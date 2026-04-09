@@ -156,7 +156,7 @@ Transform the TLOU Collectibles Tracker into a full interactive guide with two v
       "Smooth reset on leave. Disabled on touch via @media (hover: hover)",
       "Verify: parallax tilt with glare on desktop, no effect on mobile"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "expand-overlay",

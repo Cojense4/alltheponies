@@ -2,8 +2,8 @@
 
 ## Current Status
 **Last Updated:** 2026-04-09
-**Tasks Completed:** 10 / 32
-**Current Task:** card-flip complete
+**Tasks Completed:** 11 / 32
+**Current Task:** 3d-tilt complete
 
 ---
 
@@ -158,6 +158,16 @@
 - Components: TrophyFilters.tsx (tag buttons, search input), trophyFilters.ts (tag matching util)
 - `bun run lint` (pass) and `bun run build` (pass)
 - Screenshots: `screenshots/trophy-filters-search-top.png`, `screenshots/trophy-filters-search-missable.png`, `screenshots/trophy-filters-search-multi.png`, `screenshots/trophy-filters-search-name.png`
+
+### 2026-04-09 — 3d-tilt
+- Added 3D tilt hover effect to TrophyCard component
+- Updated `src/components/TrophyCard.tsx`: added `useRef`, `useCallback`, mouse tracking via `onMouseMove`, tilt state (`rotateX`, `rotateY`, `glareX`, `glareY`), inline `perspective(800px) rotateX() rotateY()` transform, CSS custom properties `--glare-x`/`--glare-y`
+- Updated `src/styles/trophy-card.css`: added `will-change: transform`, smooth `0.4s ease-out` reset transition, fast `0.08s` tracking transition on `.trophy-card--hovering`, enhanced shadow shift, glass glare `::after` pseudo-element with `radial-gradient` following cursor
+- Added `@media (hover: none)` to disable tilt on touch devices (`transform: none !important`)
+- Added `@media (hover: hover)` guards on tilt-specific styles
+- Verified: matrix3d transform applied on hover, glare gradient follows cursor position, pointer-events: none on glare
+- `bun run lint` (pass) and `bun run build` (pass)
+- Screenshots: `screenshots/3d-tilt-hover.png`
 
 ### 2026-04-09 — card-flip
 - Task was already fully implemented in a previous iteration

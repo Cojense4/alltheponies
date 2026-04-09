@@ -15,8 +15,10 @@
   cursor: pointer;
   perspective: 800px;
   transition:
+    transform 0.4s ease-out,
     box-shadow 0.25s ease,
     border-color 0.2s ease;
+  will-change: transform;
 }
 
 .trophy-card:hover {
@@ -24,6 +26,41 @@
   box-shadow:
     0 4px 20px rgba(0, 0, 0, 0.3),
     0 0 1px rgba(90, 122, 58, 0.2);
+}
+
+/* ── 3D Tilt: shadow shift on hover ── */
+@media (hover: hover) {
+  .trophy-card--hovering {
+    transition: transform 0.08s ease-out, box-shadow 0.15s ease, border-color 0.2s ease;
+    box-shadow:
+      0 8px 30px rgba(0, 0, 0, 0.4),
+      0 0 2px rgba(90, 122, 58, 0.25);
+  }
+}
+
+/* ── 3D Tilt: glass glare overlay ── */
+@media (hover: hover) {
+  .trophy-card--hovering .trophy-card__front::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 6px;
+    background: radial-gradient(
+      circle at var(--glare-x, 50%) var(--glare-y, 50%),
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0.04) 35%,
+      transparent 70%
+    );
+    pointer-events: none;
+    z-index: 3;
+  }
+}
+
+/* ── Disable tilt on touch devices ── */
+@media (hover: none) {
+  .trophy-card {
+    transform: none !important;
+  }
 }
 
 /* ── Rarity Stripe (top edge) ── */
