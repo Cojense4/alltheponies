@@ -2,6 +2,7 @@ import { useEffect, useMemo } from "react";
 import { createPortal } from "react-dom";
 import type { Trophy, TrophyType } from "../trophyData";
 import { roadmapStages } from "../trophyData";
+import { feedback } from "../utils/haptics";
 import "../styles/trophy-overlay.css";
 
 interface TrophyOverlayProps {
@@ -150,7 +151,10 @@ function TrophyOverlay({
         <div className="trophy-overlay__actions">
           <button
             className={`trophy-overlay__earn-btn ${earned ? "trophy-overlay__earn-btn--earned" : ""}`}
-            onClick={() => onToggle(trophy.id)}
+            onClick={(e) => {
+              feedback(e.currentTarget, earned ? 10 : 25);
+              onToggle(trophy.id);
+            }}
           >
             {earned ? "✓ Earned" : "Mark as Earned"}
           </button>

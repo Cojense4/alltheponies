@@ -1,6 +1,7 @@
 import { useCallback, useRef, useState } from "react";
 import type { Trophy, TrophyType } from "../trophyData";
 import Confetti from "./Confetti";
+import { feedback } from "../utils/haptics";
 import "../styles/trophy-card.css";
 
 interface TrophyCardProps {
@@ -84,6 +85,7 @@ function TrophyCard({ trophy, earned, onToggle, onExpand }: TrophyCardProps) {
       onMouseLeave={handleMouseLeave}
       onClick={() => {
         if (!flipped) {
+          feedback(cardRef.current, earned ? 10 : 25);
           if (!earned) {
             const el = cardRef.current;
             if (el) {

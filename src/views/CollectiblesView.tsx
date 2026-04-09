@@ -1,6 +1,7 @@
 import { useState, useMemo, useCallback } from "react";
 import guide from "../data";
 import ResetDialog from "../components/ResetDialog";
+import { feedback } from "../utils/haptics";
 import "./CollectiblesView.css";
 
 const STORAGE_KEY = "tlou-checked";
@@ -269,6 +270,7 @@ function CollectiblesView() {
                             className={`section-select-all ${allSectionChecked ? "checked" : ""}`}
                             onClick={(e) => {
                               e.stopPropagation();
+                              feedback(e.currentTarget);
                               toggleSelectAll(sectionItems, allSectionChecked);
                             }}
                           >
@@ -281,7 +283,10 @@ function CollectiblesView() {
                           <div
                             key={item.id}
                             className={`item ${checked[item.id] ? "checked" : ""}`}
-                            onClick={() => toggle(item.id)}
+                            onClick={(e) => {
+                              feedback(e.currentTarget);
+                              toggle(item.id);
+                            }}
                           >
                             <div className="item-checkbox">
                               <Check />

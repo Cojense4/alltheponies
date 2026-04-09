@@ -81,3 +81,34 @@ body::after {
   background: var(--accent);
   color: var(--bg-deep);
 }
+
+/* ── Haptic ripple animation ── */
+@keyframes haptic-ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.35;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+.haptic-ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background: var(--accent-bright);
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0);
+  animation: haptic-ripple 0.45s ease-out forwards;
+  z-index: 10;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .haptic-ripple {
+    animation: none;
+    display: none;
+  }
+}
