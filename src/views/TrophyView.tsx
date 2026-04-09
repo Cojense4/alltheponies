@@ -1,8 +1,9 @@
 import { useState, useCallback, useMemo } from "react";
 import { allTrophySections } from "../trophyData";
-import type { Trophy, TrophyType } from "../trophyData";
+import type { Trophy } from "../trophyData";
 import TrophyProgress from "../components/TrophyProgress";
 import TrophyFilters from "../components/TrophyFilters";
+import TrophyCard from "../components/TrophyCard";
 import { trophyMatchesTag } from "../utils/trophyFilters";
 import "./trophy-view.css";
 
@@ -61,28 +62,6 @@ function Chevron() {
     <span style={{ display: "inline-block", fontSize: "0.7rem" }}>&#9660;</span>
   );
 }
-
-function Check() {
-  return (
-    <svg
-      viewBox="0 0 12 12"
-      fill="none"
-      stroke="#0a0b0a"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="2.5 6 5 8.5 9.5 3.5" />
-    </svg>
-  );
-}
-
-const RARITY_CLASS: Record<TrophyType, string> = {
-  Platinum: "rarity-platinum",
-  Gold: "rarity-gold",
-  Silver: "rarity-silver",
-  Bronze: "rarity-bronze",
-};
 
 function TrophyView() {
   const [earned, setEarned] = useState(loadEarned);
@@ -280,64 +259,16 @@ function TrophyView() {
                 {section.note && (
                   <div className="trophy-section-note">{section.note}</div>
                 )}
-                {section.trophies.map((trophy) => {
-                  const isEarned = !!earned[trophy.id];
-                  return (
-                    <div
+                <div className="trophy-card-grid">
+                  {section.trophies.map((trophy) => (
+                    <TrophyCard
                       key={trophy.id}
-                      className={`trophy-item ${isEarned ? "earned" : ""}`}
-                      onClick={() => toggleEarned(trophy.id)}
-                    >
-                      <div className="trophy-item-checkbox">
-                        <Check />
-                      </div>
-                      <div className="trophy-item-content">
-                        <div className="trophy-item-top-row">
-                          <span
-                            className={`trophy-rarity-badge ${RARITY_CLASS[trophy.type]}`}
-                          >
-                            {trophy.type}
-                          </span>
-                          <span className="trophy-item-name">
-                            {trophy.name}
-                          </span>
-                        </div>
-                        <div className="trophy-item-desc">
-                          {trophy.description}
-                        </div>
-                        <div className="trophy-item-tags">
-                          {trophy.missable && (
-                            <span className="trophy-tag trophy-tag-missable">
-                              Missable
-                            </span>
-                          )}
-                          {trophy.onlineRequired && (
-                            <span className="trophy-tag trophy-tag-online">
-                              Online
-                            </span>
-                          )}
-                          {trophy.storyRelated && (
-                            <span className="trophy-tag trophy-tag-story">
-                              Story
-                            </span>
-                          )}
-                          {trophy.tags
-                            .filter(
-                              (t) =>
-                                t !== "missable" &&
-                                t !== "online" &&
-                                t !== "story_related",
-                            )
-                            .map((tag) => (
-                              <span key={tag} className="trophy-tag">
-                                {tag}
-                              </span>
-                            ))}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
+                      trophy={trophy}
+                      earned={!!earned[trophy.id]}
+                      onToggle={toggleEarned}
+                    />
+                  ))}
+                </div>
               </div>
             )}
           </div>

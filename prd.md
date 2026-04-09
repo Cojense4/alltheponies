@@ -132,7 +132,7 @@ Transform the TLOU Collectibles Tracker into a full interactive guide with two v
       "Responsive grid: 3-4 cols desktop, 2 tablet, 1 mobile",
       "Verify: cards display correctly at all breakpoints"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "card-flip",
