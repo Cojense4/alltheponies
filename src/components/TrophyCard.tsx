@@ -76,6 +76,7 @@ function TrophyCard({ trophy, earned, onToggle, onExpand }: TrophyCardProps) {
   return (
     <div
       ref={cardRef}
+      id={`trophy-${trophy.id}`}
       className={`trophy-card ${earned ? "trophy-card--earned" : "trophy-card--locked"} ${flipped ? "trophy-card--flipped" : ""} ${hovering ? "trophy-card--hovering" : ""}`}
       style={tiltStyle}
       onMouseEnter={() => setHovering(true)}

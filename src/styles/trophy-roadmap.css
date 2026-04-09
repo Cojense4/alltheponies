@@ -1,0 +1,306 @@
+/* ── Trophy Roadmap ── */
+.trophy-roadmap {
+  margin-bottom: 40px;
+}
+
+.trophy-roadmap__title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* ── Timeline Container ── */
+.trophy-roadmap__timeline {
+  display: flex;
+  gap: 0;
+  position: relative;
+}
+
+/* Horizontal connector line (desktop) */
+.trophy-roadmap__timeline::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: var(--border);
+  z-index: 0;
+}
+
+/* ── Stage Node ── */
+.roadmap-stage {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.roadmap-stage__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0 4px;
+  width: 100%;
+  text-align: center;
+  font-family: inherit;
+}
+
+.roadmap-stage__number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: var(--bg-deep);
+  border: 2px solid var(--border);
+  color: var(--text-muted);
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+
+.roadmap-stage--expanded .roadmap-stage__number {
+  border-color: var(--accent);
+  color: var(--accent-bright);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.roadmap-stage__number--done {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg-deep);
+}
+
+.roadmap-stage--complete.roadmap-stage--expanded .roadmap-stage__number {
+  background: var(--accent);
+  color: var(--bg-deep);
+}
+
+.roadmap-stage__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.roadmap-stage__title {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+
+.roadmap-stage__progress {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.roadmap-stage__progress--optional {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.roadmap-stage__chevron {
+  font-size: 0.5rem;
+  color: var(--text-muted);
+  transition: transform 0.2s;
+}
+
+.roadmap-stage__chevron--open {
+  transform: rotate(180deg);
+}
+
+/* ── Expanded Body ── */
+.roadmap-stage__body {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 16px;
+  margin-top: 12px;
+  animation: roadmapFadeIn 0.25s ease;
+}
+
+@keyframes roadmapFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.roadmap-stage__desc {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+/* ── Exploit Note ── */
+.roadmap-stage__exploit {
+  background: rgba(205, 127, 50, 0.08);
+  border-left: 3px solid #cd7f32;
+  border-radius: 0 3px 3px 0;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+}
+
+.roadmap-stage__exploit-label {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #cd7f32;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.roadmap-stage__exploit p {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Trophy List in Stage ── */
+.roadmap-stage__trophies {
+  margin-top: 4px;
+}
+
+.roadmap-stage__trophies-label {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.roadmap-stage__trophy-bar-track {
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.roadmap-stage__trophy-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-bright));
+  border-radius: 2px;
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.roadmap-stage__trophy-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* ── Trophy Link ── */
+.roadmap-trophy-link {
+  margin: 0;
+}
+
+.roadmap-trophy-link__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  background: rgba(74, 138, 106, 0.06);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 3px 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.roadmap-trophy-link__btn:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent-bright);
+  background: rgba(74, 138, 106, 0.12);
+}
+
+.roadmap-trophy-link__btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.roadmap-trophy-link__check {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.roadmap-trophy-link--earned .roadmap-trophy-link__check {
+  color: var(--accent-bright);
+}
+
+.roadmap-trophy-link--earned .roadmap-trophy-link__btn {
+  opacity: 0.6;
+}
+
+/* ── Mobile: Vertical timeline ── */
+@media (max-width: 768px) {
+  .trophy-roadmap__timeline {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .trophy-roadmap__timeline::before {
+    top: 20px;
+    bottom: 20px;
+    left: 19px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+
+  .roadmap-stage__header {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    padding: 8px 0;
+    gap: 12px;
+  }
+
+  .roadmap-stage__info {
+    padding-top: 8px;
+  }
+
+  .roadmap-stage__title {
+    font-size: 0.78rem;
+  }
+
+  .roadmap-stage__chevron {
+    padding-top: 10px;
+    margin-left: auto;
+  }
+
+  .roadmap-stage__body {
+    margin-left: 52px;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+}

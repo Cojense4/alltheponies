@@ -2,8 +2,8 @@
 
 ## Current Status
 **Last Updated:** 2026-04-09
-**Tasks Completed:** 15 / 32
-**Current Task:** confetti complete
+**Tasks Completed:** 16 / 32
+**Current Task:** roadmap complete
 
 ---
 
@@ -203,5 +203,20 @@
 - Verified: Canvas element appears during animation and disappears after — confirmed via DOM inspection
 - `bun run lint` (pass) and `bun run build` (pass)
 - Screenshots: `screenshots/confetti-active.png`, `screenshots/confetti-bronze.png`, `screenshots/confetti-platinum.png`
+
+### 2026-04-09 — roadmap
+- Created `src/components/TrophyRoadmap.tsx` — 5-stage interactive roadmap with expandable stages
+- Created `src/styles/trophy-roadmap.css` — horizontal timeline (desktop), vertical timeline (mobile ≤768px)
+- Added `id="trophy-{id}"` attributes on TrophyCard for scroll-to linking from roadmap
+- Added `.trophy-card--highlight` animation in trophy-card.css for scroll target glow effect
+- Each stage shows: numbered circle, title, trophy count with completion %, chevron toggle
+- Expanded body: description paragraph, exploit tip callout (bronze accent), progress bar, clickable trophy name links
+- Trophy links scroll smoothly to matching card and trigger 1.5s highlight glow animation
+- Stage completion % calculated from earned trophies linked to each stage
+- Stages 3 & 4 show "Optional" label (no linked trophies)
+- Completed stages show checkmark instead of number, green filled circle
+- Integrated into TrophyView.tsx between TrophyProgress and TrophyFilters
+- `bun run lint` (pass) and `bun run build` (pass)
+- Screenshots: `screenshots/roadmap-expanded.png`, `screenshots/roadmap-trophy-links.png`, `screenshots/roadmap-scroll-to-card.png`, `screenshots/roadmap-mobile.png`, `screenshots/roadmap-mobile-collapsed.png`
 
 <!-- Agent will append dated entries below -->

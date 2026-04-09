@@ -2,6 +2,7 @@ import { useState, useCallback, useMemo } from "react";
 import { allTrophySections } from "../trophyData";
 import type { Trophy } from "../trophyData";
 import TrophyProgress from "../components/TrophyProgress";
+import TrophyRoadmap from "../components/TrophyRoadmap";
 import TrophyFilters from "../components/TrophyFilters";
 import TrophyCard from "../components/TrophyCard";
 import TrophyOverlay from "../components/TrophyOverlay";
@@ -207,6 +208,7 @@ function TrophyView() {
       </header>
 
       <TrophyProgress trophies={visibleTrophies} earned={earned} />
+      <TrophyRoadmap earned={earned} />
       <TrophyFilters
         dlcToggles={dlcToggles}
         onToggle={toggleDlc}

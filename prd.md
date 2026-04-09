@@ -193,7 +193,7 @@ Transform the TLOU Collectibles Tracker into a full interactive guide with two v
       "Horizontal timeline desktop, vertical mobile",
       "Verify: stages render, links scroll to cards"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "haptics",

@@ -437,6 +437,17 @@
   }
 }
 
+/* ── Highlight animation (scroll-to from roadmap) ── */
+@keyframes trophyHighlight {
+  0% { box-shadow: 0 0 0 0 var(--accent-glow); }
+  50% { box-shadow: 0 0 20px 6px var(--accent-glow); }
+  100% { box-shadow: 0 0 0 0 var(--accent-glow); }
+}
+
+.trophy-card--highlight {
+  animation: trophyHighlight 1.5s ease;
+}
+
 /* Mobile: 1 column */
 @media (max-width: 600px) {
   .trophy-card-grid {
