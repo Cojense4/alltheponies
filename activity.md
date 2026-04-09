@@ -2,8 +2,8 @@
 
 ## Current Status
 **Last Updated:** 2026-04-09
-**Tasks Completed:** 11 / 32
-**Current Task:** 3d-tilt complete
+**Tasks Completed:** 15 / 32
+**Current Task:** confetti complete
 
 ---
 
@@ -191,5 +191,17 @@
 - Verified: One overlay at a time (single `expandedTrophy` state in TrophyView)
 - `bun run lint` (pass) and `bun run build` (pass)
 - Screenshot: attempted but timed out (font loading); verified via snapshot
+
+### 2026-04-09 — confetti
+- Task was already fully implemented in a previous iteration
+- Verified: Confetti.tsx is canvas-based, renders 400x400 fixed-position canvas at card center
+- Verified: Triggers only on earn (not uncheck) — TrophyCard checks `if (!earned)` before setting confetti state
+- Verified: Particle counts — Bronze: 25, Silver: 25, Gold: 55, Platinum: 110 (matches PRD ranges)
+- Verified: Rarity colors — Bronze (copper/brown), Silver (gray), Gold (gold/yellow), Platinum (rainbow 10 colors)
+- Verified: Mobile 50% reduction via `isTouchDevice()` using `(hover: none)` media query
+- Verified: Auto-cleanup after 2s (`DURATION = 2000`), canvas removed from DOM via `onDone` callback
+- Verified: Canvas element appears during animation and disappears after — confirmed via DOM inspection
+- `bun run lint` (pass) and `bun run build` (pass)
+- Screenshots: `screenshots/confetti-active.png`, `screenshots/confetti-bronze.png`, `screenshots/confetti-platinum.png`
 
 <!-- Agent will append dated entries below -->

@@ -180,7 +180,7 @@ Transform the TLOU Collectibles Tracker into a full interactive guide with two v
       "Mobile: 50% fewer particles. Auto-cleanup ~2s",
       "Verify: confetti scales per rarity"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "roadmap",
