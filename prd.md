@@ -96,7 +96,7 @@ Transform the TLOU Collectibles Tracker into a full interactive guide with two v
       "Create src/styles/trophy-view.css",
       "Verify: /#/trophies shows all 50 trophies with working checkboxes"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "dlc-toggle",

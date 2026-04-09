@@ -2,8 +2,8 @@
 
 ## Current Status
 **Last Updated:** 2026-04-08
-**Tasks Completed:** 7 / 32
-**Current Task:** reset-dialog-readability complete
+**Tasks Completed:** 8 / 32
+**Current Task:** trophy-view-basic complete
 
 ---
 
@@ -124,5 +124,17 @@
 - Backdrop click also dismisses dialog
 - `bun run lint` (pass) and `bun run build` (pass)
 - Screenshots: `screenshots/reset-dialog-checked-item.png`, `screenshots/reset-dialog-open.png`, `screenshots/reset-dialog-confirmed.png`
+
+### 2026-04-08 — trophy-view-basic
+- Task was already fully implemented in a previous iteration
+- Verified: TrophyView.tsx has header ("The Last of Us" + "Trophy Guide"), TrophyProgress component, 5 collapsible sections
+- Verified: localStorage tracking with key 'tlou-trophies', Record<number, boolean> type
+- Verified: TrophyProgress.tsx shows progress bar, rarity breakdown (Platinum/Gold/Silver/Bronze), points (1980 max)
+- Verified: All 5 sections present — Base Game (24), Left Behind (10), Reclaimed Territories (7), Abandoned Territories (7), Grounded Mode (2) = 50 total
+- Verified: CSS at src/views/trophy-view.css with comprehensive styling for progress, sections, items, badges, responsive
+- Verified: Checkbox click earns trophy, updates progress (30/1980 pts for Silver), section count, and rarity breakdown
+- Verified: Section collapse/expand works independently
+- `bun run lint` (pass) and `bun run build` (pass)
+- Screenshots: `screenshots/trophy-view-basic-top.png`, `screenshots/trophy-view-basic-checked.png`, `screenshots/trophy-view-basic-collapsed.png`
 
 <!-- Agent will append dated entries below -->
