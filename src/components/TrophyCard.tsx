@@ -1,5 +1,6 @@
 import { useCallback, useRef, useState } from "react";
 import type { Trophy, TrophyType } from "../trophyData";
+import Confetti from "./Confetti";
 import "../styles/trophy-card.css";
 
 interface TrophyCardProps {
@@ -35,6 +36,10 @@ function TrophyCard({ trophy, earned, onToggle, onExpand }: TrophyCardProps) {
     glareY: 50,
   });
   const [hovering, setHovering] = useState(false);
+  const [confetti, setConfetti] = useState<{
+    x: number;
+    y: number;
+  } | null>(null);
 
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     const el = cardRef.current;
@@ -77,7 +82,19 @@ function TrophyCard({ trophy, earned, onToggle, onExpand }: TrophyCardProps) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onClick={() => {
-        if (!flipped) onToggle(trophy.id);
+        if (!flipped) {
+          if (!earned) {
+            const el = cardRef.current;
+            if (el) {
+              const rect = el.getBoundingClientRect();
+              setConfetti({
+                x: rect.left + rect.width / 2,
+                y: rect.top + rect.height / 2,
+              });
+            }
+          }
+          onToggle(trophy.id);
+        }
       }}
     >
       <div className="trophy-card__inner">
@@ -214,6 +231,15 @@ function TrophyCard({ trophy, earned, onToggle, onExpand }: TrophyCardProps) {
           </button>
         </div>
       </div>
+
+      {confetti && (
+        <Confetti
+          x={confetti.x}
+          y={confetti.y}
+          rarity={trophy.type}
+          onDone={() => setConfetti(null)}
+        />
+      )}
     </div>
   );
 }
