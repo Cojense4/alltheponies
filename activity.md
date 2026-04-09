@@ -180,4 +180,16 @@
 - `bun run lint` (pass) and `bun run build` (pass)
 - Screenshots: `screenshots/card-flip-initial.png`, `screenshots/card-flip-flipped.png`, `screenshots/card-flip-returned.png`, `screenshots/card-flip-missable.png`
 
+### 2026-04-09 — expand-overlay
+- Task was already fully implemented in a previous iteration
+- Verified: TrophyOverlay.tsx exists as a portal-based component with full trophy details
+- Verified: Shows rarity badge, name, description, tags (Missable/Online/Story/collectable), roadmap stage info
+- Verified: Full guide text displayed in dedicated section with missable warning
+- Verified: "Mark as Earned" button toggles trophy state, disabled "Add Note" placeholder
+- Verified: backdrop-filter: blur(8px) on overlay backdrop, card animation on open
+- Verified: Close via X button, Escape key, and backdrop click all work
+- Verified: One overlay at a time (single `expandedTrophy` state in TrophyView)
+- `bun run lint` (pass) and `bun run build` (pass)
+- Screenshot: attempted but timed out (font loading); verified via snapshot
+
 <!-- Agent will append dated entries below -->

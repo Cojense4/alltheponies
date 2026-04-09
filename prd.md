@@ -168,7 +168,7 @@ Transform the TLOU Collectibles Tracker into a full interactive guide with two v
       "Include 'Add Note' placeholder. Close via X/Escape/backdrop",
       "Verify: overlay shows, blur works, closes cleanly"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "confetti",
