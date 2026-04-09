@@ -2,11 +2,36 @@ import { useState, useCallback, useMemo } from "react";
 import { allTrophySections } from "../trophyData";
 import type { TrophyType } from "../trophyData";
 import TrophyProgress from "../components/TrophyProgress";
+import TrophyFilters from "../components/TrophyFilters";
 import "./trophy-view.css";
 
 const STORAGE_KEY = "tlou-trophies";
+const DLC_STORAGE_KEY = "tlou-dlc-toggles";
 
 type EarnedState = Record<number, boolean>;
+
+/** DLC section keys mapped by dlcName */
+const DLC_SECTIONS = [
+  { key: "left-behind", label: "Left Behind", dlcName: "Left Behind" },
+  {
+    key: "reclaimed",
+    label: "Reclaimed Territories",
+    dlcName: "Reclaimed Territories",
+  },
+  {
+    key: "abandoned",
+    label: "Abandoned Territories",
+    dlcName: "Abandoned Territories",
+  },
+  { key: "grounded", label: "Grounded Mode", dlcName: "Grounded Mode" },
+];
+
+const DEFAULT_DLC_STATE: Record<string, boolean> = {
+  "left-behind": true,
+  reclaimed: false,
+  abandoned: false,
+  grounded: false,
+};
 
 function loadEarned(): EarnedState {
   try {
@@ -14,6 +39,20 @@ function loadEarned(): EarnedState {
   } catch {
     return {};
   }
+}
+
+function loadDlcToggles(): Record<string, boolean> {
+  try {
+    const stored = localStorage.getItem(DLC_STORAGE_KEY);
+    if (stored) {
+      const parsed = JSON.parse(stored) as Record<string, boolean>;
+      // Ensure all keys exist (in case new DLCs added)
+      return { ...DEFAULT_DLC_STATE, ...parsed };
+    }
+  } catch {
+    // fall through
+  }
+  return { ...DEFAULT_DLC_STATE };
 }
 
 function Chevron() {
@@ -46,6 +85,7 @@ const RARITY_CLASS: Record<TrophyType, string> = {
 
 function TrophyView() {
   const [earned, setEarned] = useState(loadEarned);
+  const [dlcEnabled, setDlcEnabled] = useState(loadDlcToggles);
   const [openSections, setOpenSections] = useState<Record<number, boolean>>(
     () => {
       const initial: Record<number, boolean> = {};
@@ -69,14 +109,49 @@ function TrophyView() {
     });
   }, []);
 
+  const toggleDlc = useCallback((key: string) => {
+    setDlcEnabled((prev) => {
+      const next = { ...prev, [key]: !prev[key] };
+      localStorage.setItem(DLC_STORAGE_KEY, JSON.stringify(next));
+      return next;
+    });
+  }, []);
+
   const toggleSection = useCallback((i: number) => {
     setOpenSections((prev) => ({ ...prev, [i]: !prev[i] }));
   }, []);
 
-  const allTrophies = useMemo(
-    () => allTrophySections.flatMap((s) => s.trophies),
-    [],
+  /** Build set of hidden DLC names for filtering */
+  const hiddenDlcNames = useMemo(() => {
+    const hidden = new Set<string>();
+    for (const dlc of DLC_SECTIONS) {
+      if (!dlcEnabled[dlc.key]) {
+        hidden.add(dlc.dlcName);
+      }
+    }
+    return hidden;
+  }, [dlcEnabled]);
+
+  /** Sections visible after DLC toggle filtering */
+  const visibleSections = useMemo(
+    () =>
+      allTrophySections.filter(
+        (s) => !s.dlcName || !hiddenDlcNames.has(s.dlcName),
+      ),
+    [hiddenDlcNames],
   );
+
+  /** All trophies from visible sections only — used for progress */
+  const visibleTrophies = useMemo(
+    () => visibleSections.flatMap((s) => s.trophies),
+    [visibleSections],
+  );
+
+  const dlcToggles = DLC_SECTIONS.map((dlc) => ({
+    key: dlc.key,
+    label: dlc.label,
+    enabled: dlcEnabled[dlc.key],
+  }));
 
   return (
     <div className="app trophy-app">
@@ -85,9 +160,11 @@ function TrophyView() {
         <div className="subtitle">Trophy Guide</div>
       </header>
 
-      <TrophyProgress trophies={allTrophies} earned={earned} />
+      <TrophyProgress trophies={visibleTrophies} earned={earned} />
+      <TrophyFilters dlcToggles={dlcToggles} onToggle={toggleDlc} />
 
-      {allTrophySections.map((section, si) => {
+      {visibleSections.map((section) => {
+        const si = allTrophySections.indexOf(section);
         const sectionEarned = section.trophies.filter(
           (t) => earned[t.id],
         ).length;

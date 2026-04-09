@@ -107,7 +107,7 @@ Transform the TLOU Collectibles Tracker into a full interactive guide with two v
       "Hidden DLC trophies excluded from progress. Persist in localStorage",
       "Verify: toggles show/hide sections and update progress"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "trophy-filters-search",

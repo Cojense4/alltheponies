@@ -137,4 +137,15 @@
 - `bun run lint` (pass) and `bun run build` (pass)
 - Screenshots: `screenshots/trophy-view-basic-top.png`, `screenshots/trophy-view-basic-checked.png`, `screenshots/trophy-view-basic-collapsed.png`
 
+### 2026-04-09 — dlc-toggle
+- Created `src/components/TrophyFilters.tsx` — DLC toggle buttons with active/inactive indicator dots
+- Updated `src/views/TrophyView.tsx` — added DLC toggle state, filters visible sections and trophies passed to TrophyProgress
+- Added CSS for `.trophy-dlc-filters`, `.trophy-dlc-toggle`, `.trophy-dlc-toggle-indicator` in trophy-view.css
+- Default state: Left Behind ON, Reclaimed OFF, Abandoned OFF, Grounded OFF
+- localStorage key `tlou-dlc-toggles` persists toggle state as `Record<string, boolean>`
+- Hidden DLC trophies excluded from progress bar, points, rarity breakdown, and trophy count
+- Verified: toggling Reclaimed on changes 34→41 trophies, 1470→1635 pts; toggling Left Behind off drops to 31 trophies
+- `bun run lint` (pass) and `bun run build` (pass)
+- Screenshots: `screenshots/dlc-toggle-trophies-view.png`, `screenshots/dlc-toggle-reclaimed-on.png`, `screenshots/dlc-toggle-leftbehind-off.png`
+
 <!-- Agent will append dated entries below -->
