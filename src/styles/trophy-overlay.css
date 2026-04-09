@@ -1,0 +1,313 @@
+/* ── Trophy Overlay Backdrop ── */
+.trophy-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: overlay-fade-in 0.2s ease-out;
+}
+
+@keyframes overlay-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ── Overlay Card ── */
+.trophy-overlay__card {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glow);
+  border-radius: 8px;
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.5),
+    0 0 24px rgba(90, 122, 58, 0.1);
+  animation: overlay-card-in 0.25s ease-out;
+}
+
+@keyframes overlay-card-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ── Rarity Stripe ── */
+.trophy-overlay__stripe {
+  height: 4px;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.trophy-overlay__stripe.tc-rarity-platinum {
+  background: linear-gradient(90deg, #8b9bff, #c4b0ff, #b8c4ff, #e0d0ff, #8b9bff);
+  background-size: 200% 100%;
+  animation: shimmer-stripe 3s linear infinite;
+}
+
+.trophy-overlay__stripe.tc-rarity-gold {
+  background: linear-gradient(90deg, #b8860b, #ffd700, #ffb800, #ffd700, #b8860b);
+  background-size: 200% 100%;
+  animation: shimmer-stripe 3s linear infinite;
+}
+
+.trophy-overlay__stripe.tc-rarity-silver {
+  background: linear-gradient(90deg, #808080, #c0c0c0, #e0e0e0, #c0c0c0, #808080);
+  background-size: 200% 100%;
+  animation: shimmer-stripe 4s linear infinite;
+}
+
+.trophy-overlay__stripe.tc-rarity-bronze {
+  background: linear-gradient(90deg, #8b5e2b, #cd7f32, #e8a050, #cd7f32, #8b5e2b);
+  background-size: 200% 100%;
+  animation: shimmer-stripe 4s linear infinite;
+}
+
+/* ── Close Button ── */
+.trophy-overlay__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-deep);
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  z-index: 2;
+}
+
+.trophy-overlay__close svg {
+  width: 14px;
+  height: 14px;
+}
+
+.trophy-overlay__close:hover {
+  color: var(--text-primary);
+  border-color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ── Header ── */
+.trophy-overlay__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 24px 0;
+}
+
+.trophy-overlay__icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.trophy-overlay__name {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin: 0 0 4px;
+}
+
+.trophy-overlay__badge {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 10px;
+  border-radius: 2px;
+}
+
+.trophy-overlay__badge.tc-rarity-platinum {
+  background: linear-gradient(135deg, rgba(184, 196, 255, 0.2), rgba(200, 180, 255, 0.15));
+  color: #b8c4ff;
+}
+
+.trophy-overlay__badge.tc-rarity-gold {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 180, 0, 0.15));
+  color: #ffd700;
+}
+
+.trophy-overlay__badge.tc-rarity-silver {
+  background: linear-gradient(135deg, rgba(192, 192, 192, 0.2), rgba(180, 180, 180, 0.15));
+  color: #c0c0c0;
+}
+
+.trophy-overlay__badge.tc-rarity-bronze {
+  background: linear-gradient(135deg, rgba(205, 127, 50, 0.2), rgba(180, 100, 30, 0.15));
+  color: #cd7f32;
+}
+
+/* ── Description ── */
+.trophy-overlay__desc {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  padding: 12px 24px 0;
+  font-weight: 300;
+}
+
+/* ── Tags ── */
+.trophy-overlay__tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 12px 24px 0;
+}
+
+.trophy-overlay__tag {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 2px;
+  background: rgba(138, 138, 106, 0.12);
+  color: var(--text-muted);
+}
+
+.trophy-overlay__tag--missable {
+  background: rgba(184, 85, 85, 0.15);
+  color: var(--tag-comic);
+}
+
+.trophy-overlay__tag--online {
+  background: rgba(74, 138, 176, 0.15);
+  color: var(--tag-ff);
+}
+
+.trophy-overlay__tag--story {
+  background: rgba(58, 170, 119, 0.12);
+  color: var(--tag-man);
+}
+
+/* ── Guide Section ── */
+.trophy-overlay__section {
+  padding: 16px 24px 0;
+}
+
+.trophy-overlay__section-title {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 8px;
+}
+
+.trophy-overlay__warning {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--tag-comic);
+  background: rgba(184, 85, 85, 0.12);
+  padding: 6px 12px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+}
+
+.trophy-overlay__guide {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* ── Actions ── */
+.trophy-overlay__actions {
+  display: flex;
+  gap: 10px;
+  padding: 20px 24px 24px;
+}
+
+.trophy-overlay__earn-btn {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-deep);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.trophy-overlay__earn-btn:hover {
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+.trophy-overlay__earn-btn--earned {
+  background: rgba(90, 122, 58, 0.15);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.trophy-overlay__note-btn {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-deep);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .trophy-overlay {
+    padding: 16px;
+  }
+
+  .trophy-overlay__card {
+    max-height: 85vh;
+  }
+
+  .trophy-overlay__header {
+    padding: 16px 20px 0;
+  }
+
+  .trophy-overlay__desc,
+  .trophy-overlay__tags {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .trophy-overlay__section {
+    padding: 14px 20px 0;
+  }
+
+  .trophy-overlay__actions {
+    padding: 16px 20px 20px;
+  }
+}

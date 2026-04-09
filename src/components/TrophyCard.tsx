@@ -6,6 +6,7 @@ interface TrophyCardProps {
   trophy: Trophy;
   earned: boolean;
   onToggle: (id: number) => void;
+  onExpand: (trophy: Trophy) => void;
 }
 
 const RARITY_CLASS: Record<TrophyType, string> = {
@@ -24,7 +25,7 @@ const RARITY_ICON: Record<TrophyType, string> = {
 
 const MAX_TILT = 8;
 
-function TrophyCard({ trophy, earned, onToggle }: TrophyCardProps) {
+function TrophyCard({ trophy, earned, onToggle, onExpand }: TrophyCardProps) {
   const [flipped, setFlipped] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
   const [tilt, setTilt] = useState({
@@ -137,23 +138,44 @@ function TrophyCard({ trophy, earned, onToggle }: TrophyCardProps) {
               ))}
           </div>
 
-          <button
-            className="trophy-card__flip-btn"
-            onClick={handleFlip}
-            title="Show guide"
-          >
-            <svg
-              viewBox="0 0 16 16"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+          <div className="trophy-card__btn-row">
+            <button
+              className="trophy-card__expand-btn"
+              onClick={(e) => {
+                e.stopPropagation();
+                onExpand(trophy);
+              }}
+              title="Expand details"
             >
-              <path d="M2 8a6 6 0 0 1 10.3-4.15L14 2v4h-4l1.6-1.6A4.5 4.5 0 0 0 3.5 8" />
-              <path d="M14 8a6 6 0 0 1-10.3 4.15L2 14v-4h4l-1.6 1.6A4.5 4.5 0 0 0 12.5 8" />
-            </svg>
-          </button>
+              <svg
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M10 2h4v4M6 14H2v-4M14 2L9.5 6.5M2 14l4.5-4.5" />
+              </svg>
+            </button>
+            <button
+              className="trophy-card__flip-btn"
+              onClick={handleFlip}
+              title="Show guide"
+            >
+              <svg
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M2 8a6 6 0 0 1 10.3-4.15L14 2v4h-4l1.6-1.6A4.5 4.5 0 0 0 3.5 8" />
+                <path d="M14 8a6 6 0 0 1-10.3 4.15L2 14v-4h4l-1.6 1.6A4.5 4.5 0 0 0 12.5 8" />
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* ── Back Face ── */}

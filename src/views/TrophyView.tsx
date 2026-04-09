@@ -4,6 +4,7 @@ import type { Trophy } from "../trophyData";
 import TrophyProgress from "../components/TrophyProgress";
 import TrophyFilters from "../components/TrophyFilters";
 import TrophyCard from "../components/TrophyCard";
+import TrophyOverlay from "../components/TrophyOverlay";
 import { trophyMatchesTag } from "../utils/trophyFilters";
 import "./trophy-view.css";
 
@@ -68,6 +69,7 @@ function TrophyView() {
   const [dlcEnabled, setDlcEnabled] = useState(loadDlcToggles);
   const [activeTags, setActiveTags] = useState<Set<string>>(new Set());
   const [searchQuery, setSearchQuery] = useState("");
+  const [expandedTrophy, setExpandedTrophy] = useState<Trophy | null>(null);
   const [openSections, setOpenSections] = useState<Record<number, boolean>>(
     () => {
       const initial: Record<number, boolean> = {};
@@ -266,6 +268,7 @@ function TrophyView() {
                       trophy={trophy}
                       earned={!!earned[trophy.id]}
                       onToggle={toggleEarned}
+                      onExpand={setExpandedTrophy}
                     />
                   ))}
                 </div>
@@ -274,6 +277,15 @@ function TrophyView() {
           </div>
         );
       })}
+
+      {expandedTrophy && (
+        <TrophyOverlay
+          trophy={expandedTrophy}
+          earned={!!earned[expandedTrophy.id]}
+          onClose={() => setExpandedTrophy(null)}
+          onToggle={toggleEarned}
+        />
+      )}
 
       <footer className="footer">
         <p>
