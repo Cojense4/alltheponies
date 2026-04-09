@@ -1,8 +1,9 @@
 import { useState, useCallback, useMemo } from "react";
 import { allTrophySections } from "../trophyData";
-import type { TrophyType } from "../trophyData";
+import type { Trophy, TrophyType } from "../trophyData";
 import TrophyProgress from "../components/TrophyProgress";
 import TrophyFilters from "../components/TrophyFilters";
+import { trophyMatchesTag } from "../utils/trophyFilters";
 import "./trophy-view.css";
 
 const STORAGE_KEY = "tlou-trophies";
@@ -86,6 +87,8 @@ const RARITY_CLASS: Record<TrophyType, string> = {
 function TrophyView() {
   const [earned, setEarned] = useState(loadEarned);
   const [dlcEnabled, setDlcEnabled] = useState(loadDlcToggles);
+  const [activeTags, setActiveTags] = useState<Set<string>>(new Set());
+  const [searchQuery, setSearchQuery] = useState("");
   const [openSections, setOpenSections] = useState<Record<number, boolean>>(
     () => {
       const initial: Record<number, boolean> = {};
@@ -121,6 +124,22 @@ function TrophyView() {
     setOpenSections((prev) => ({ ...prev, [i]: !prev[i] }));
   }, []);
 
+  const toggleTag = useCallback((tag: string) => {
+    setActiveTags((prev) => {
+      const next = new Set(prev);
+      if (next.has(tag)) {
+        next.delete(tag);
+      } else {
+        next.add(tag);
+      }
+      return next;
+    });
+  }, []);
+
+  const clearTags = useCallback(() => {
+    setActiveTags(new Set());
+  }, []);
+
   /** Build set of hidden DLC names for filtering */
   const hiddenDlcNames = useMemo(() => {
     const hidden = new Set<string>();
@@ -147,6 +166,52 @@ function TrophyView() {
     [visibleSections],
   );
 
+  /** Filter a trophy against active tags and search query */
+  const trophyMatchesFilters = useCallback(
+    (trophy: Trophy): boolean => {
+      // Tag filter: trophy must match at least one active tag
+      if (activeTags.size > 0) {
+        let matchesAnyTag = false;
+        for (const tag of activeTags) {
+          if (trophyMatchesTag(trophy, tag)) {
+            matchesAnyTag = true;
+            break;
+          }
+        }
+        if (!matchesAnyTag) return false;
+      }
+
+      // Text search: match against name and tags only
+      if (searchQuery.trim()) {
+        const q = searchQuery.trim().toLowerCase();
+        const nameMatch = trophy.name.toLowerCase().includes(q);
+        const tagMatch = trophy.tags.some((t) => t.toLowerCase().includes(q));
+        if (!nameMatch && !tagMatch) return false;
+      }
+
+      return true;
+    },
+    [activeTags, searchQuery],
+  );
+
+  /** Sections with filtered trophies (only sections that have matches) */
+  const filteredSections = useMemo(() => {
+    const hasFilters = activeTags.size > 0 || searchQuery.trim().length > 0;
+    if (!hasFilters) return visibleSections;
+    return visibleSections
+      .map((section) => ({
+        ...section,
+        trophies: section.trophies.filter(trophyMatchesFilters),
+      }))
+      .filter((section) => section.trophies.length > 0);
+  }, [visibleSections, activeTags, searchQuery, trophyMatchesFilters]);
+
+  /** Total match count for display */
+  const matchCount = useMemo(
+    () => filteredSections.reduce((sum, s) => sum + s.trophies.length, 0),
+    [filteredSections],
+  );
+
   const dlcToggles = DLC_SECTIONS.map((dlc) => ({
     key: dlc.key,
     label: dlc.label,
@@ -161,9 +226,19 @@ function TrophyView() {
       </header>
 
       <TrophyProgress trophies={visibleTrophies} earned={earned} />
-      <TrophyFilters dlcToggles={dlcToggles} onToggle={toggleDlc} />
+      <TrophyFilters
+        dlcToggles={dlcToggles}
+        onToggle={toggleDlc}
+        activeTags={activeTags}
+        onTagToggle={toggleTag}
+        onTagClear={clearTags}
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+        visibleTrophies={visibleTrophies}
+        matchCount={matchCount}
+      />
 
-      {visibleSections.map((section) => {
+      {filteredSections.map((section) => {
         const si = allTrophySections.indexOf(section);
         const sectionEarned = section.trophies.filter(
           (t) => earned[t.id],
