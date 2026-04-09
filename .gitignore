@@ -50,3 +50,4 @@ reset-playwright.sh
 
 # Local config (not tracked, per-developer)
 CLAUDE.md
+ralph-prune.sh
