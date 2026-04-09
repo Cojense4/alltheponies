@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { createPortal } from "react-dom";
 import type { Trophy, TrophyType } from "../trophyData";
+import { roadmapStages } from "../trophyData";
 import "../styles/trophy-overlay.css";
 
 interface TrophyOverlayProps {
@@ -30,6 +31,16 @@ function TrophyOverlay({
   onClose,
   onToggle,
 }: TrophyOverlayProps) {
+  const roadmapStage = useMemo(
+    () =>
+      roadmapStages.find((s) =>
+        s.trophiesAvailable.some(
+          (name) => name.toLowerCase() === trophy.name.toLowerCase(),
+        ),
+      ),
+    [trophy.name],
+  );
+
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -111,6 +122,20 @@ function TrophyOverlay({
               </span>
             ))}
         </div>
+
+        {roadmapStage && (
+          <div className="trophy-overlay__section">
+            <h3 className="trophy-overlay__section-title">Roadmap</h3>
+            <div className="trophy-overlay__roadmap">
+              <span className="trophy-overlay__roadmap-stage">
+                Stage {roadmapStage.stage}
+              </span>
+              <span className="trophy-overlay__roadmap-title">
+                {roadmapStage.title}
+              </span>
+            </div>
+          </div>
+        )}
 
         <div className="trophy-overlay__section">
           <h3 className="trophy-overlay__section-title">Guide</h3>

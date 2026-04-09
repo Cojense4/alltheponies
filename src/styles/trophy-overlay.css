@@ -204,6 +204,33 @@
   color: var(--tag-man);
 }
 
+/* ── Roadmap ── */
+.trophy-overlay__roadmap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trophy-overlay__roadmap-stage {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 2px;
+  background: rgba(90, 122, 58, 0.15);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.trophy-overlay__roadmap-title {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
 /* ── Guide Section ── */
 .trophy-overlay__section {
   padding: 16px 24px 0;
