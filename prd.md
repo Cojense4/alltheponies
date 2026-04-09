@@ -144,7 +144,7 @@ Transform the TLOU Collectibles Tracker into a full interactive guide with two v
       "~0.6s ease-in-out. Different background on back",
       "Verify: smooth 180 deg flip, returns on second click"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "3d-tilt",

@@ -1,9 +1,9 @@
 # TLOU Interactive Guide - Activity Log
 
 ## Current Status
-**Last Updated:** 2026-04-08
-**Tasks Completed:** 9 / 32
-**Current Task:** trophy-filters-search complete
+**Last Updated:** 2026-04-09
+**Tasks Completed:** 10 / 32
+**Current Task:** card-flip complete
 
 ---
 
@@ -158,5 +158,16 @@
 - Components: TrophyFilters.tsx (tag buttons, search input), trophyFilters.ts (tag matching util)
 - `bun run lint` (pass) and `bun run build` (pass)
 - Screenshots: `screenshots/trophy-filters-search-top.png`, `screenshots/trophy-filters-search-missable.png`, `screenshots/trophy-filters-search-multi.png`, `screenshots/trophy-filters-search-name.png`
+
+### 2026-04-09 — card-flip
+- Task was already fully implemented in a previous iteration
+- Verified: TrophyCard.tsx has `flipped` state, front face (trophy info) and back face (guide text)
+- Verified: CSS 3D flip via `rotateY(180deg)` with `perspective: 800px`, `backface-visibility: hidden`, `transform-style: preserve-3d`
+- Verified: `0.6s ease-in-out` transition on `.trophy-card__inner`
+- Verified: Dedicated "Show guide" flip button on front, "Back to front" on back
+- Verified: Back face shows name + rarity badge, missable warning (⚠ Missable), guide text
+- Verified: Flip and return both work smoothly in browser
+- `bun run lint` (pass) and `bun run build` (pass)
+- Screenshots: `screenshots/card-flip-initial.png`, `screenshots/card-flip-flipped.png`, `screenshots/card-flip-returned.png`, `screenshots/card-flip-missable.png`
 
 <!-- Agent will append dated entries below -->
